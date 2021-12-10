@@ -1,6 +1,6 @@
 import pluginsObject from "./plugins.js";
 
-const projectName = `mir`; // название проекта
+const projectName = `finance`; // название проекта
 const distFolder = `${projectName}_dist`; // Папка продакшн
 const distFolderZip = `${distFolder}.zip`;
 const srcFolder = `_src`; // Папка разработки
@@ -11,18 +11,23 @@ const assemblyBabel = false; // babel true or false
 
 const plugunsJsUsed = [
   `jquery_js`,
-  `mmenu_js`,
-  `jquery_modal_js`,
-  `inputmask_js`,
+  `videojs__js`,
+  `slick_js`,
+  // `locomotive_scroll`,
+  // `mmenu_js`,
+  // `jquery_modal_js`,
+  // `inputmask_js`,
   // `swiper_js`,
-  `lazysizes_js`,
+  // `lazysizes_js`,
   `myJsLibs`,
   `myJsFile`,
 ];
 const plugunsCssUsed = [
   `normalize_css`,
-  `mmenu_css`,
-  `jquery_modal_css`,
+  `videojs__css`,
+  `slick_css`,
+  // `mmenu_css`,
+  // `jquery_modal_css`,
   // `swiper_css`,
   `myCssLibs`,
   `myCssFile`,
@@ -48,6 +53,11 @@ const plugunsJs = new Map([
   [`myJsLibs`, `${srcFolder}/js/libs/**/*.js`], // мои библиотеки js
   [`swiper_js`, `node_modules/swiper/swiper-bundle.min.js`],
   [`micromodal_js`, `node_modules/micromodal/dist/micromodal.min.js`],
+  [`videojs__js`, `node_modules/video.js/dist/video.min.js`],
+  [
+    `locomotive_scroll`,
+    `node_modules/locomotive-scroll/dist/locomotive-scroll.min.js`,
+  ],
 ]);
 
 const plugunsCss = new Map([
@@ -71,6 +81,7 @@ const plugunsCss = new Map([
   [`myCssFile`, `${srcFolder}/sass/style.scss`], // мой файл css
   [`myCssLibs`, `${srcFolder}/css/libs/**/*.css`], // мои библиотеки css
   [`swiper_css`, `node_modules/swiper/swiper-bundle.min.css`],
+  [`videojs__css`, `node_modules/video.js/dist/video-js.min.css`],
 ]);
 
 const paths = {

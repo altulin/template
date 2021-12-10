@@ -29,7 +29,11 @@ const createWebp = () => {
   makeImages();
   return src(webpImg)
     .pipe(newer({ dest: webpFolder, ext: ".webp" }))
-    .pipe(webp())
+    .pipe(
+      webp({
+        quality: 100,
+      })
+    )
     .pipe(dest(webpFolder));
 };
 

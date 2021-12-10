@@ -2,3 +2,44 @@ extends ../templates/_main.pug
 include ../helpers/mixins.pug
 
 block content
+	section.promo
+		.promo__inner
+			.promo__title-wrap.container
+				h1.promo__title
+					|Получайте пасcивный доход в&nbsp;криптовалюте
+
+			.promo__video.video
+				.video__wrap
+					.video__inner.container
+						video-js.video__body.video-js#video-promo
+							source(src="/video/test.mp4" type="video/mp4")
+							source(src="/video/test.webm" type="video/webm")
+
+					//- button.video__btn(type="button")
+					//- +img-retina(`video_btn`, `png`, `кнопка видео`, `video__btn`, `262`, `262`)
+
+	.fire
+
+		section.how
+			.how__inner.container
+				h2.how__title.title Как это работает?
+				ul.how__list
+					each val, i in how
+						li.how__item.how-point
+							.how-point__inner
+								figure.how-point__img(class=`how-point__img--${i+1}`)
+								.how-point__box
+									h3.how-point__title= `${val[0]}`
+									p.how-point__text= `${val[1]}`
+
+		.fire__bg.fire__bg--right
+			+img-retina('fire_bg_right', 'png', 'фон', 'fire__img-bg-r', '579', '1160')
+
+		.fire__bg.fire__bg--bottom
+			+img-retina('fire_bg_bottom', 'png', 'фон', 'fire__img-bg-b', '937', '1325')
+
+		section.packages
+			.packages__inner.container
+				h2.packages__title.title Пакеты инвестирования
+				.packages__list
+					.packages__item

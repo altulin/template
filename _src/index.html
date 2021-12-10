@@ -19,7 +19,7 @@
   <link href="/css/style.css" rel="stylesheet">
 </head>
 
-<body class="page-body">
+<body class="page-body" data-scroll-container>
   <header class="header" id="header">
     <div class="header__inner container container--header">
       <a class="header__logo logo" href="/index.html">
@@ -27,20 +27,91 @@
           <source type="image/webp" srcset="/img/webp/logo.webp 1x, /img/webp/logo@2x.webp 2x" />
           <img class="logo__img" src="/img/logo.png" srcset="/img/logo.png 1x, /img/logo@2x.png 2x" alt="логотип" width="145" height="46" />
         </picture>
-      </a>
+      </a><a class="header__user private link" href="/login/"><span class="private__text">Войти в личный кабинет</span><span class="private__icon">
+            <svg class="private__svg__icon" viewBox="0 0 40 40" width="40" height="40">
+              <use xlink:href="/img/sprite.svg#user"></use>
+            </svg></span></a>
     </div>
   </header>
   <main class="page-main">
+    <section class="promo">
+      <div class="promo__inner">
+        <div class="promo__title-wrap container">
+          <h1 class="promo__title">Получайте пасcивный доход в&nbsp;криптовалюте</h1>
+        </div>
+        <div class="promo__video video">
+          <div class="video__wrap">
+            <div class="video__inner container">
+              <video-js class="video__body video-js" id="video-promo">
+                <source src="/video/test.mp4" type="video/mp4">
+                  <source src="/video/test.webm" type="video/webm">
+              </video-js>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <div class="fire">
+      <section class="how">
+        <div class="how__inner container">
+          <h2 class="how__title title">Как это работает?</h2>
+          <ul class="how__list">
+            <li class="how__item how-point">
+              <div class="how-point__inner">
+                <figure class="how-point__img how-point__img--1"></figure>
+                <div class="how-point__box">
+                  <h3 class="how-point__title">Зарегистрируйтесь на сайте</h3>
+                  <p class="how-point__text">Создайте аккаунт и подтвердите указанные вами данные</p>
+                </div>
+              </div>
+            </li>
+            <li class="how__item how-point">
+              <div class="how-point__inner">
+                <figure class="how-point__img how-point__img--2"></figure>
+                <div class="how-point__box">
+                  <h3 class="how-point__title">Выберите пакет инвестирования</h3>
+                  <p class="how-point__text">Начните инвестировать</p>
+                </div>
+              </div>
+            </li>
+            <li class="how__item how-point">
+              <div class="how-point__inner">
+                <figure class="how-point__img how-point__img--3"></figure>
+                <div class="how-point__box">
+                  <h3 class="how-point__title">Получайте вознаграждение</h3>
+                  <p class="how-point__text">Получайте пассивный доход и следите за статистикой</p>
+                </div>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </section>
+      <div class="fire__bg fire__bg--right">
+        <picture>
+          <source type="image/webp" srcset="/img/webp/fire_bg_right.webp 1x, /img/webp/fire_bg_right@2x.webp 2x" />
+          <img class="fire__img-bg-r" src="/img/fire_bg_right.png" srcset="/img/fire_bg_right.png 1x, /img/fire_bg_right@2x.png 2x" alt="фон" width="579" height="1160" />
+        </picture>
+      </div>
+      <div class="fire__bg fire__bg--bottom">
+        <picture>
+          <source type="image/webp" srcset="/img/webp/fire_bg_bottom.webp 1x, /img/webp/fire_bg_bottom@2x.webp 2x" />
+          <img class="fire__img-bg-b" src="/img/fire_bg_bottom.png" srcset="/img/fire_bg_bottom.png 1x, /img/fire_bg_bottom@2x.png 2x" alt="фон" width="937" height="1325" />
+        </picture>
+      </div>
+      <section class="packages">
+        <div class="packages__inner container">
+          <h2 class="packages__title title">Пакеты инвестирования</h2>
+          <div class="packages__list">
+            <div class="packages__item"></div>
+          </div>
+        </div>
+      </section>
+    </div>
   </main>
   <footer class="main-footer">
     <div class="main-footer__inner">
       <div class="main-footer__top">
-        <a class="footer__logo" href="#">
-          <picture>
-            <source type="image/webp" srcset="/img/webp/nav-logo.webp 1x, /img/webp/nav-logo@2x.webp 2x" />
-            <img class="logo__img" src="/img/nav-logo.png" srcset="/img/nav-logo.png 1x, /img/nav-logo@2x.png 2x" alt="логотип" width="141" height="21" />
-          </picture>
-        </a>
+        <a class="footer__logo" href="#"></a>
       </div>
       <div class="main-footer__bottom">
         <div class="footer__nav-wrap">

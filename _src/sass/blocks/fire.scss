@@ -1,0 +1,22 @@
+.fire {
+  padding-top: 160px;
+  position: relative;
+  overflow: hidden;
+
+  &__bg {
+    position: absolute;
+    pointer-events: none;
+
+    &--right {
+      top: -238px;
+      right: 0;
+    }
+
+    &--bottom {
+      top: 238px;
+      right: 10%;
+    }
+  }
+
+
+}
