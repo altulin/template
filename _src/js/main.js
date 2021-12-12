@@ -455,6 +455,13 @@ const check = (element) => {
 //   }
 // };
 
+const getScroll = () => {
+  const scroll = new LocomotiveScroll({
+    el: document.querySelector("[data-scroll-container]"),
+    smooth: true,
+  });
+};
+
 const getVideoPromo = () => {
   const video = $("#video-promo");
 
@@ -531,5 +538,5 @@ $(function () {
   resize();
   createSlider();
   // playVideo();
-  // getScroll();
+  getScroll();
 });

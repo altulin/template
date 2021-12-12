@@ -5,7 +5,7 @@ block content
 	section.promo
 		.promo__inner
 			.promo__title-wrap.container
-				h1.promo__title
+				h1.promo__title(data-scroll data-scroll-speed="1")
 					|Получайте пасcивный доход в&nbsp;криптовалюте
 
 			.promo__video.video
@@ -22,8 +22,8 @@ block content
 
 		section.how
 			.how__inner.container
-				h2.how__title.title Как это работает?
-				ul.how__list
+				h2.how__title.title(data-scroll data-scroll-speed="1") Как это работает?
+				ul.how__list(data-scroll data-scroll-speed="2")
 					each val, i in how
 						li.how__item.how-point
 							.how-point__inner
@@ -42,4 +42,34 @@ block content
 			.packages__inner.container
 				h2.packages__title.title Пакеты инвестирования
 				.packages__list
-					.packages__item
+					.packages__item.package
+						.package__inner
+							h3.package__title Пакет 365
+								p.package__text Инвестирование на 1 год с ежемесячной выплатой дохода в размере до 15% от вложенной суммы. Тело вложений возвращается в конце срока инвестирования
+								ul.package__list
+									li.package__item
+										span.package__money 1 000 – 2 999 $
+										|
+										| –
+										|
+										span.package__proc 8% в месяц
+									li.package__item
+										span.package__money 3 000 – 9 999 $
+										|
+										| –
+										|
+										span.package__proc 10% в месяц
+									li.package__item
+										span.package__money 10 000 – 19 999 $
+										|
+										| –
+										|
+										span.package__proc 12% в месяц
+									li.package__item
+										span.package__money 20 000 $
+										|
+										| –
+										|
+										span.package__proc 15% в месяц
+
+								.package__range

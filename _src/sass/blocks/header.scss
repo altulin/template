@@ -1,11 +1,11 @@
 .header {
-  position: fixed;
-  width: 100%;
-  left: 0;
-  top: 0;
+  background-color: #151419;
+  position: relative;
+  z-index: 1;
 
   &__inner {
     padding-top: 42px;
+    padding-bottom: 42px;
     display: flex;
     align-items: center;
     justify-content: space-between;

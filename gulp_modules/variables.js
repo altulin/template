@@ -13,7 +13,7 @@ const plugunsJsUsed = [
   `jquery_js`,
   `videojs__js`,
   `slick_js`,
-  // `locomotive_scroll`,
+  `locomotive_scroll`,
   // `mmenu_js`,
   // `jquery_modal_js`,
   // `inputmask_js`,
@@ -26,6 +26,7 @@ const plugunsCssUsed = [
   `normalize_css`,
   `videojs__css`,
   `slick_css`,
+  `locomotive_scroll_css`,
   // `mmenu_css`,
   // `jquery_modal_css`,
   // `swiper_css`,
@@ -82,6 +83,10 @@ const plugunsCss = new Map([
   [`myCssLibs`, `${srcFolder}/css/libs/**/*.css`], // мои библиотеки css
   [`swiper_css`, `node_modules/swiper/swiper-bundle.min.css`],
   [`videojs__css`, `node_modules/video.js/dist/video-js.min.css`],
+  [
+    `locomotive_scroll_css`,
+    `node_modules/locomotive-scroll/dist/locomotive-scroll.min.css`,
+  ],
 ]);
 
 const paths = {
