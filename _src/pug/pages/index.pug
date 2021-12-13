@@ -45,31 +45,91 @@ block content
 					.packages__item.package
 						.package__inner
 							h3.package__title Пакет 365
-								p.package__text Инвестирование на 1 год с ежемесячной выплатой дохода в размере до 15% от вложенной суммы. Тело вложений возвращается в конце срока инвестирования
-								ul.package__list
-									li.package__item
-										span.package__money 1 000 – 2 999 $
-										|
-										| –
-										|
-										span.package__proc 8% в месяц
-									li.package__item
-										span.package__money 3 000 – 9 999 $
-										|
-										| –
-										|
-										span.package__proc 10% в месяц
-									li.package__item
-										span.package__money 10 000 – 19 999 $
-										|
-										| –
-										|
-										span.package__proc 12% в месяц
-									li.package__item
-										span.package__money 20 000 $
-										|
-										| –
-										|
-										span.package__proc 15% в месяц
+							p.package__text Инвестирование на 1 год с ежемесячной выплатой дохода в размере до 15% от вложенной суммы. Тело вложений возвращается в конце срока инвестирования
+							ul.package__list
+								li.package__item
+									span.package__money 1 000 – 2 999 $
+									|
+									| –
+									|
+									span.package__proc 8% в месяц
+								li.package__item
+									span.package__money 3 000 – 9 999 $
+									|
+									| –
+									|
+									span.package__proc 10% в месяц
+								li.package__item
+									span.package__money 10 000 – 19 999 $
+									|
+									| –
+									|
+									span.package__proc 12% в месяц
+								li.package__item
+									span.package__money 20 000 $
+									|
+									| –
+									|
+									span.package__proc 15% в месяц
 
-								.package__range
+							.package__range.range-box
+								label.range-box__label(for="package-365")
+									span.range-box__title Сумма инвестиций:
+									input.range-box__input#package-365(type="text" readonly)
+									span.range-box__proc
+										span 8
+										|
+										| %
+								.range-box__label
+									span.range-box__title Ваш доход составит:
+									p.range-box__marga
+										span 82 000
+										|
+										| $
+
+							a.package__link(href="/login") Инвестировать
+
+
+
+					.packages__item.package
+						.package__inner
+							h3.package__title Пакет 150
+							p.package__text Инвестирование на 1 год с ежемесячной выплатой дохода в размере до 15% от вложенной суммы. Тело вложений возвращается в конце срока инвестирования
+							ul.package__list
+								li.package__item
+									span.package__money 1 000 – 2 999 $
+									|
+									| –
+									|
+									span.package__proc 8% в месяц
+								li.package__item
+									span.package__money 3 000 – 9 999 $
+									|
+									| –
+									|
+									span.package__proc 10% в месяц
+								li.package__item
+									span.package__money 10 000 – 19 999 $
+									|
+									| –
+									|
+									span.package__proc 12% в месяц
+								li.package__item
+									span.package__money 20 000 $
+									|
+									| –
+									|
+									span.package__proc 15% в месяц
+
+							.package__range.range-box
+								label.range-box__label(for="package-150")
+									span.range-box__title Сумма инвестиций:
+									input.range-box__input#package-150(type="text" readonly)
+								.range-box__label
+									span.range-box__title Ваш доход составит:
+									p.range-box__marga
+										span 82 000
+										|
+										| $
+
+							a.package__link(href="/login") Инвестировать

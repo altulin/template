@@ -1,0 +1,101 @@
+.packages {
+
+  &__inner {}
+
+  &__title {
+    margin-bottom: 60px;
+  }
+
+  &__list {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__item {
+    width: calc(50% - 20px);
+    background-color: #21212B;
+    box-shadow: inset 0px 2.60282px 2.60282px rgba(255, 255, 255, 0.08);
+    border-radius: 40px;
+    display: flex;
+    justify-content: center;
+    padding-top: 60px;
+    padding-bottom: 62px;
+  }
+
+  &__link {}
+}
+
+.container {}
+
+.title {}
+
+.package {
+
+  &__inner {
+    max-width: 540px;
+  }
+
+  &__title {
+    font-weight: 700;
+    @include font-size(46px);
+    line-height: 105%;
+    margin-bottom: 30px;
+  }
+
+  &__text {
+    @include font("Gilroy");
+    font-size: 20px;
+    line-height: 140%;
+    color: #7A838D;
+    margin-bottom: 30px;
+  }
+
+  &__list {
+    @include font("Gilroy");
+    font-size: 20px;
+    line-height: 140%;
+    color: #7A838D;
+    margin-bottom: 44px;
+  }
+
+  &__item {}
+
+  &__money {}
+
+  &__proc {}
+
+  &__range {}
+}
+
+.range-box {
+
+  &__label {
+    @include font("Gilroy");
+    display: flex;
+    justify-content: space-between;
+
+    &+.range-box__label {
+      margin-top: 30px;
+    }
+  }
+
+  &__title {
+    font-size: 20px;
+    line-height: 24px;
+    max-width: 115px;
+  }
+
+  &__input {}
+
+  &__marga {}
+
+  &__proc {
+    font-size: 42px;
+    line-height: 48px;
+    letter-spacing: -0.01em;
+    font-weight: 400;
+    color: #7A838D;
+  }
+}
+
+.package-box {}
