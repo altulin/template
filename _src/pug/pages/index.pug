@@ -3,20 +3,19 @@ include ../helpers/mixins.pug
 
 block content
 	section.promo
-		.promo__inner
-			.promo__title-wrap.container
+		.promo__inner.container
+			.promo__title-wrap
 				h1.promo__title(data-scroll data-scroll-speed="1")
 					|Получайте пасcивный доход в&nbsp;криптовалюте
 
 			.promo__video.video
-				.video__wrap
-					.video__inner.container
-						video.video__body#video-promo(width=1320 height=446)
-							source(src="/video/test.mp4" type="video/mp4")
-							source(src="/video/test.webm" type="video/webm")
+				.video__inner
+					video.video__body#video-promo(width="1320" height="446" poster="/img/poster.png")
+						source(src="/video/test.mp4" type="video/mp4")
+						source(src="/video/test.webm" type="video/webm")
 
-					//- button.video__btn(type="button")
-					//- +img-retina(`video_btn`, `png`, `кнопка видео`, `video__btn`, `262`, `262`)
+					button.video__btn(type="button")
+						+img-retina(`video_btn`, `png`, `кнопка видео`, `video__btn`, `262`, `262`)
 
 	.fire
 
@@ -45,8 +44,8 @@ block content
 
 		section.packages
 			.packages__inner.container
-				h2.packages__title.title Пакеты инвестирования
-				.packages__list
+				h2.packages__title.title(data-scroll data-scroll-speed="1") Пакеты инвестирования
+				.packages__list(data-scroll data-scroll-speed="2")
 					.packages__item.package
 						.package__inner
 							h3.package__title Пакет 365
@@ -148,13 +147,9 @@ block content
 											span 129 600
 											|
 											| $
-
-
-
-
-
-
 							a.package__link(href="/login") Инвестировать
+
+
 
 
 
@@ -200,3 +195,7 @@ block content
 										| $
 
 							a.package__link(href="/login") Инвестировать
+
+		section.programs
+			.programs__inner
+				h2.programs Реферальные программы

@@ -2,7 +2,9 @@
   background-color: #151419;
   padding-top: 200px;
 
-  &__inner {}
+  @include mw($tb) {
+    padding-top: 100px;
+  }
 
   &__title-wrap {
     margin-bottom: 73px;
@@ -24,46 +26,25 @@
     }
   }
 
-  &__video {}
 }
-
-.container {}
 
 .video {
 
   &__wrap {
     height: 446px;
-    overflow: hidden;
-    display: flex;
-    flex-direction: column;
   }
 
   &__inner {
-    // flex-grow: 1;
-    height: 100%;
+    height: 446px;
     width: 100%;
-    position: relative;
+    border-radius: 8px;
     overflow: hidden;
-    max-width: 1350px;
-
-    // &::after {
-    //   position: absolute;
-    //   content: "";
-    //   width: 100%;
-    //   height: 446px;
-    //   left: 0;
-    //   top: 0;
-    //   pointer-events: none;
-    //   // background-color: #37353E;
-    //   background-image: url("../img/poster.png");
-    //   background-repeat: no-repeat;
-    //   background-position: center;
-    //   background-size: contain;
-    //   // mix-blend-mode: color;
-    // }
+    position: relative;
   }
 
-  &__body {}
+  &__body {
+    object-fit: cover;
+  }
 
   &__btn {
     position: absolute;
@@ -76,61 +57,16 @@
     background-color: transparent;
     cursor: pointer;
     z-index: 1;
-    transition: 0.9s;
+    transition: opacity 0.9s;
 
-    @include hocus() {
-      opacity: 0.9;
+    @include mw($tb) {
+      width: 180px;
+      height: 180px;
+    }
+
+    &--hidden {
+      opacity: 0;
+      pointer-events: none;
     }
   }
-}
-
-.video-js {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-}
-
-.video__body .vjs-big-play-button {
-  top: 50%;
-  left: 50%;
-  width: 262px;
-  height: 262px;
-  border-radius: 50%;
-  transform: translate(-50%, -50%);
-  border: none;
-  background-color: transparent;
-  background-image: url('/img/video_btn.png');
-  background-size: cover;
-  cursor: pointer;
-  z-index: 1;
-  transition: 0.3s;
-
-  @include mw($tb) {
-    width: 180px;
-    height: 180px;
-  }
-
-  @include mw($ph) {
-    width: 150px;
-    height: 150px;
-  }
-
-  & span {
-    display: none;
-  }
-}
-
-.video__body {}
-
-.vjs-paused .vjs-big-play-button {
-  display: block;
-}
-
-.vjs-has-started.vjs-user-inactive.vjs-playing .vjs-control-bar {
-  display: none;
-}
-
-.vjs-has-started .vjs-control-bar {
-  display: none;
 }

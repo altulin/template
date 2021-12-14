@@ -11,7 +11,7 @@ const assemblyBabel = false; // babel true or false
 
 const plugunsJsUsed = [
   `jquery_js`,
-  `videojs__js`,
+  // `videojs__js`,
   `slick_js`,
   `locomotive_scroll`,
   `ionRangesliderJs`,
@@ -25,7 +25,7 @@ const plugunsJsUsed = [
 ];
 const plugunsCssUsed = [
   `normalize_css`,
-  `videojs__css`,
+  // `videojs__css`,
   `slick_css`,
   `locomotive_scroll_css`,
   "ionRangesliderCss",

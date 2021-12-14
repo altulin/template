@@ -1,8 +1,6 @@
 .how {
   margin-bottom: 160px;
 
-  &__inner {}
-
   &__title {
     margin-bottom: 60px;
   }
@@ -14,7 +12,6 @@
     @include mw(1000px) {
       display: block;
       width: 100%;
-      // max-width: 400px;
 
     }
   }
@@ -24,7 +21,6 @@
     flex-grow: 1;
     background-image: linear-gradient(180deg, rgba(158, 213, 255, 0.07) 0%, rgba(197, 229, 255, 0.03) 92.19%);
     box-shadow: 0px 2.6028172969818115px 2.6028172969818115px 0px #FFFFFF14 inset;
-    // backdrop-filter: blur(52.0564px);
     border-radius: 8px;
     @include padding-top(2.5rem);
     @include padding-bottom(2.5rem);
@@ -52,15 +48,6 @@
     }
   }
 
-  &__bg {
-
-    &--right {}
-  }
-
-  &__img-bg-r {}
-
-  &__img-bg-b {}
-
   @include mw($tb) {
     margin-bottom: 60px;
   }
@@ -74,8 +61,6 @@
 }
 
 .how-point {
-
-
   &__inner {
     height: 100%;
     max-width: 363px;
@@ -105,8 +90,6 @@
       @include margin-bottom(4.375rem);
     }
 
-
-
     &--1 {
       background-image: url('/img/how-1.png');
     }
@@ -116,13 +99,9 @@
     }
 
     &--3 {
-      // width: 83px;
-      // height: 89px;
       background-image: url('/img/how-3.png');
     }
   }
-
-  &__box {}
 
   &__title {
     font-weight: 600;
@@ -140,13 +119,6 @@
     letter-spacing: -0.02em;
     color: $grey;
   }
-}
-
-.packages {
-
-  &__inner {}
-
-  &__title {}
 }
 
 .slick-track {

@@ -10,7 +10,7 @@ const {
   autoprefixer,
   rename,
   cleancss,
-  // gcmq,
+  gcmq,
   gulpif,
   sassGlob,
   gulp: { src, dest },
@@ -30,10 +30,11 @@ const getStyleFile = () => {
       .pipe(sass())
       .pipe(concat(cssFile))
       .pipe(
-        autoprefixer({ overrideBrowserslist: ["last 10 versions"], grid: true })
+        autoprefixer({ overrideBrowserslist: ["last 3 versions"], grid: true })
       )
       .pipe(gulpif(mode === `development`, sourcemaps.write(".")))
       // .pipe(gulpif(mode === `production`, gcmq()))
+      // .pipe(gcmq())
       .pipe(dest(cssFolder))
       .pipe(
         gulpif(

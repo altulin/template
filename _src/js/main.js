@@ -576,6 +576,24 @@ const makeRange = (num) => {
   }
 };
 
+const playVideo = () => {
+  const btn = $(".video__btn");
+  const video = $(".video__body");
+  if (check(btn) && check(video)) {
+    btn.on("click", (e) => {
+      video.trigger("play");
+      btn.addClass("video__btn--hidden");
+      e.stopPropagation();
+    });
+
+    video.on("click", (e) => {
+      console.log("dfd");
+      video.trigger("pause");
+      btn.removeClass("video__btn--hidden");
+    });
+  }
+};
+
 $(function () {
   // reload();
   // getAccordionNav();
@@ -598,7 +616,7 @@ $(function () {
   // getVideoPromo();
   resize();
   createSlider();
-  // playVideo();
+  playVideo();
   makeRange(365);
   makeRange(150);
   getScroll();
