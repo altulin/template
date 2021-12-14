@@ -14,6 +14,7 @@ const plugunsJsUsed = [
   `videojs__js`,
   `slick_js`,
   `locomotive_scroll`,
+  `ionRangesliderJs`,
   // `mmenu_js`,
   // `jquery_modal_js`,
   // `inputmask_js`,
@@ -27,6 +28,7 @@ const plugunsCssUsed = [
   `videojs__css`,
   `slick_css`,
   `locomotive_scroll_css`,
+  "ionRangesliderCss",
   // `mmenu_css`,
   // `jquery_modal_css`,
   // `swiper_css`,
@@ -59,6 +61,10 @@ const plugunsJs = new Map([
     `locomotive_scroll`,
     `node_modules/locomotive-scroll/dist/locomotive-scroll.min.js`,
   ],
+  [
+    `ionRangesliderJs`,
+    `node_modules/ion-rangeslider/js/ion.rangeSlider.min.js`,
+  ],
 ]);
 
 const plugunsCss = new Map([
@@ -86,6 +92,10 @@ const plugunsCss = new Map([
   [
     `locomotive_scroll_css`,
     `node_modules/locomotive-scroll/dist/locomotive-scroll.min.css`,
+  ],
+  [
+    "ionRangesliderCss",
+    "node_modules/ion-rangeslider/css/ion.rangeSlider.min.css",
   ],
 ]);
 

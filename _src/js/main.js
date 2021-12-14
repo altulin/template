@@ -460,6 +460,16 @@ const getScroll = () => {
     el: document.querySelector("[data-scroll-container]"),
     smooth: true,
   });
+
+  scroll.on("scroll", (data) => {
+    const scrollTop = data.scroll.y;
+
+    if (scrollTop > 100) {
+      $(".header").addClass("header--scroll");
+    } else {
+      $(".header").removeClass("header--scroll");
+    }
+  });
 };
 
 const getVideoPromo = () => {
@@ -515,6 +525,17 @@ const createSlider = () => {
   }
 };
 
+const makeRange = (num) => {
+  const input = $(`#package-${num}`);
+  if (check(input)) {
+    input.ionRangeSlider({
+      min: 100,
+      max: 1000,
+      from: 550,
+    });
+  }
+};
+
 $(function () {
   // reload();
   // getAccordionNav();
@@ -538,5 +559,7 @@ $(function () {
   resize();
   createSlider();
   // playVideo();
+  makeRange(365);
+  makeRange(150);
   getScroll();
 });
