@@ -60,6 +60,10 @@
   &__img-bg-r {}
 
   &__img-bg-b {}
+
+  @include mw($tb) {
+    margin-bottom: 60px;
+  }
 }
 
 .title {
@@ -148,4 +152,27 @@
 .slick-track {
   display: flex;
   align-items: stretch;
+}
+
+.slick-arrow {
+  position: absolute;
+  top: 45%;
+  transform: translateY(-50%);
+  background-image: url("/img/svg/arrow.svg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  font-size: 0;
+  background-color: transparent;
+  width: 12px;
+  height: 20px;
+  z-index: 1;
+}
+
+.slick-prev {
+  left: 10px;
+  transform: translateY(-50%) rotate(180deg);
+}
+
+.slick-next {
+  right: 10px;
 }

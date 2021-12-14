@@ -3,6 +3,10 @@
   position: relative;
   overflow: hidden;
 
+  @include mw($tb) {
+    padding-top: 60px;
+  }
+
   &__bg {
     position: absolute;
     pointer-events: none;
@@ -15,6 +19,11 @@
     &--bottom {
       top: 238px;
       right: 10%;
+    }
+
+    &--3 {
+      top: 75%;
+      left: -30%;
     }
   }
 

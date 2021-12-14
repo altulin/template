@@ -9,20 +9,13 @@
   &__list {
     display: flex;
     justify-content: space-between;
+
+    @include mw($tb) {
+      flex-direction: column;
+    }
   }
 
-  &__item {
-    width: calc(50% - 20px);
-    background-color: #21212B;
-    box-shadow: inset 0px 2.60282px 2.60282px rgba(255, 255, 255, 0.08);
-    border-radius: 40px;
-    display: flex;
-    justify-content: center;
-    padding-top: 60px;
-    padding-bottom: 62px;
-  }
-
-  &__link {}
+  &__item {}
 }
 
 .container {}
@@ -30,20 +23,49 @@
 .title {}
 
 .package {
+  width: calc(50% - 20px);
+  background-color: #21212B;
+  box-shadow: inset 0px 2.60282px 2.60282px rgba(255, 255, 255, 0.08);
+  border-radius: 40px;
+  @include padding-left(20px);
+  @include padding-right(20px);
+  @include padding-top(60px);
+  @include padding-bottom(62px);
+  display: flex;
+  justify-content: center;
+
+  @include mw(1000px) {
+    width: calc(50% - 10px);
+  }
+
+  @include mw($tb) {
+    width: 100%;
+    padding-left: 10px;
+    padding-right: 10px;
+    border-radius: 4px;
+
+    &+.package {
+      margin-top: 20px;
+    }
+  }
 
   &__inner {
     max-width: 540px;
+    display: flex;
+    flex-direction: column;
   }
 
   &__title {
-    font-weight: 700;
     @include font-size(46px);
     line-height: 105%;
+    letter-spacing: -0.04em;
     margin-bottom: 30px;
+    font-weight: 700;
   }
 
   &__text {
     @include font("Gilroy");
+    font-weight: normal;
     font-size: 20px;
     line-height: 140%;
     color: #7A838D;
@@ -52,10 +74,11 @@
 
   &__list {
     @include font("Gilroy");
+    font-weight: normal;
     font-size: 20px;
     line-height: 140%;
     color: #7A838D;
-    margin-bottom: 44px;
+    margin-bottom: auto;
   }
 
   &__item {}
@@ -65,37 +88,141 @@
   &__proc {}
 
   &__range {}
+
+  &__link {
+    @include font("EuclidSquare");
+    display: block;
+    margin-top: 70px;
+    font-size: 20px;
+    line-height: 25px;
+    color: $white;
+    padding-top: 27px;
+    padding-bottom: 28px;
+    text-align: center;
+    width: 100%;
+    background: linear-gradient(360deg, #FF6060 0%, #FF0100 100%);
+    border-radius: 4px;
+    transition: opacity 0.3s;
+
+    @include hocus() {
+      opacity: 0.7;
+    }
+
+    @include mw($tb) {
+      margin-top: 40px;
+    }
+  }
 }
 
 .range-box {
+  @include font("Gilroy");
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 44px;
 
-  &__label {
-    @include font("Gilroy");
-    display: flex;
-    justify-content: space-between;
+  @include mw(1000px) {
+    flex-direction: column;
+    align-items: stretch;
+  }
 
-    &+.range-box__label {
-      margin-top: 30px;
-    }
+  &+.range-box {
+    margin-top: 30px;
   }
 
   &__title {
     font-size: 20px;
     line-height: 24px;
+    color: #FFFFFF;
     max-width: 115px;
+
+    @include mw(1000px) {
+      margin-bottom: 20px;
+    }
+  }
+
+  &__content {
+    @include font-size(42px);
+    line-height: 1.21;
+    letter-spacing: -0.01em;
+    color: #FFFFFF;
+    font-weight: 700;
+    flex-grow: 1;
+    max-width: 375px;
+    margin-left: 20px;
+
+    @include mw(1000px) {
+      margin-left: 0;
+      max-width: none;
+    }
+  }
+
+  &__label {
+    padding-top: 14px;
+    padding-bottom: 14px;
+    padding-left: 20px;
+    padding-right: 20px;
+    background-color: #272732;
+    border-radius: 4px;
+    display: block;
+    width: 100%;
+    position: relative;
   }
 
   &__input {}
 
-  &__marga {}
-
   &__proc {
-    font-size: 42px;
-    line-height: 48px;
-    letter-spacing: -0.01em;
     font-weight: 400;
     color: #7A838D;
+    position: absolute;
+    right: 20px;
+    top: 50%;
+    transform: translateY(-50%);
   }
-}
 
-.package-box {}
+  &__marga {}
+
+  & .irs-max,
+  & .irs-min,
+  & .irs-from,
+  & .irs-to,
+  & .irs-single {
+    display: none;
+  }
+
+  & .irs--flat {
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    left: 0;
+    top: auto;
+    bottom: 0;
+
+    .irs-line {
+      height: 2px;
+      top: 0;
+    }
+
+    .irs-bar--single {
+      border-radius: 0;
+      height: 2px;
+      top: 0;
+    }
+
+    .irs-handle {
+      width: 20px;
+      height: 20px;
+      border-radius: 50%;
+      background-color: $white;
+      border: 2px solid #DD140D;
+      top: -9px;
+      cursor: pointer;
+
+      i {
+        display: none;
+      }
+    }
+  }
+
+
+}

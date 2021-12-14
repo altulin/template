@@ -472,19 +472,20 @@ const getScroll = () => {
   });
 };
 
-const getVideoPromo = () => {
-  const video = $("#video-promo");
+// const getVideoPromo = () => {
+//   const video = $("#video-promo");
 
-  if (check(video)) {
-    videojs("video-promo", {
-      controls: true,
-      autoplay: false,
-      preload: "auto",
-    });
+//   if (check(video)) {
+//     videojs("video-promo", {
+//       controls: true,
+//       autoplay: false,
+//       preload: "auto",
+//       poster: "../img/poster.png",
+//     });
 
-    // console.log(videojs.options);
-  }
-};
+//     // console.log(videojs.options);
+//   }
+// };
 
 const resize = () => {
   let resizeTimeout;
@@ -526,12 +527,51 @@ const createSlider = () => {
 };
 
 const makeRange = (num) => {
-  const input = $(`#package-${num}`);
-  if (check(input)) {
-    input.ionRangeSlider({
-      min: 100,
-      max: 1000,
-      from: 550,
+  const inputRange = $(`#package-${num}`);
+
+  const getProfit = (proc, sum, modif) => {
+    const profit = (sum / 100) * proc * 12;
+    $(`.range-box__marga--${modif}`).text(profit.toLocaleString());
+    if (modif === 365) {
+      $(".range-box__proc--365 span").text(proc);
+    }
+  };
+
+  const getСalculate = (data) => {
+    const sumPretty = data.from_pretty;
+    const sumFrom = data.from;
+    const { input } = data;
+    $(`.range-box__val--${num}`).text(sumPretty);
+
+    if ($(input).is("#package-150")) {
+      getProfit(15, sumFrom, 150);
+    }
+
+    if ($(input).is("#package-365")) {
+      if (sumFrom > 1000 && sumFrom < 2999) {
+        getProfit(8, sumFrom, 365);
+      }
+      if (sumFrom > 3000 && sumFrom < 9999) {
+        getProfit(10, sumFrom, 365);
+      }
+      if (sumFrom > 10000 && sumFrom < 19999) {
+        getProfit(12, sumFrom, 365);
+      }
+      if (sumFrom > 20000) {
+        getProfit(15, sumFrom, 365);
+      }
+    }
+  };
+
+  if (check(inputRange)) {
+    inputRange.ionRangeSlider({
+      min: 1000,
+      max: 100000,
+      from: 72000,
+      step: 500,
+      onChange(data) {
+        getСalculate(data);
+      },
     });
   }
 };
@@ -555,7 +595,7 @@ $(function () {
   // getAnchor();
   // scrollFunction();
 
-  getVideoPromo();
+  // getVideoPromo();
   resize();
   createSlider();
   // playVideo();

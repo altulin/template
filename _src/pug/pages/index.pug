@@ -11,7 +11,7 @@ block content
 			.promo__video.video
 				.video__wrap
 					.video__inner.container
-						video-js.video__body.video-js#video-promo
+						video.video__body#video-promo(width=1320 height=446)
 							source(src="/video/test.mp4" type="video/mp4")
 							source(src="/video/test.webm" type="video/webm")
 
@@ -37,6 +37,11 @@ block content
 
 		.fire__bg.fire__bg--bottom
 			+img-retina('fire_bg_bottom', 'png', 'фон', 'fire__img-bg-b', '937', '1325')
+
+		.fire__bg.fire__bg--3
+			+img-retina('fire_bg_bottom', 'png', 'фон', 'fire__img-bg-b', '937', '1325')
+
+
 
 		section.packages
 			.packages__inner.container
@@ -73,25 +78,87 @@ block content
 									span.package__proc 15% в месяц
 
 							.package__range.range-box
-								label.range-box__label(for="package-365")
-									span.range-box__title Сумма инвестиций:
-									input.range-box__input#package-365(type="text" readonly)
-									span.range-box__proc
-										span 8
-										|
-										| %
-								.range-box__label
-									span.range-box__title Ваш доход составит:
-									p.range-box__marga
-										span 82 000
-										|
-										| $
+								span.range-box__title Сумма инвестиций:
+								.range-box__content
+									label.range-box__label(for="package-365")
+										span.range-box__invest
+											span.range-box__val.range-box__val--365 72 000
+											|
+											| %
+										input.range-box__input#package-365(type="text" readonly)
+
+										span.range-box__proc.range-box__proc--365
+											span 15
+											|
+											| %
+
+							.package__range.range-box
+								span.range-box__title Ваш доход составит:
+								.range-box__content
+									.range-box__label
+										p.range-box__marga.range-box__marga--365
+											span 130 500
+											|
+											| $
+							a.package__link(href="/login") Инвестировать
+
+					.packages__item.package
+						.package__inner
+							h3.package__title Пакет 150
+							p.package__text Инвестирование на 150 дней. Доход составляет 15% в месяц от вложенной суммы. Тело вложений возвращается в конце срока  инвестирования
+							ul.package__list
+								li.package__item
+									span.package__cash 1 выплата
+									|
+									| –
+									|
+									span.package__proc за 90 дней через 90 дней
+
+								li.package__item
+									span.package__cash 2 выплата
+									|
+									| –
+									|
+									span.package__proc через 120 дней за 30 дней
+
+								li.package__item
+									span.package__cash 3 выплата
+									|
+									| –
+									|
+									span.package__proc 150 дней за последние 30 дней
+
+							.package__range.range-box
+								span.range-box__title Сумма инвестиций:
+								.range-box__content
+									label.range-box__label(for="package-150")
+										span.range-box__invest
+											span.range-box__val.range-box__val--150 72 000
+											|
+											| %
+										input.range-box__input#package-150(type="text" readonly)
+
+
+
+							.package__range.range-box
+								span.range-box__title Ваш доход составит:
+								.range-box__content
+									.range-box__label
+										p.range-box__marga.range-box__marga--150
+											span 129 600
+											|
+											| $
+
+
+
+
+
 
 							a.package__link(href="/login") Инвестировать
 
 
 
-					.packages__item.package
+					//- .packages__item.package
 						.package__inner
 							h3.package__title Пакет 150
 							p.package__text Инвестирование на 1 год с ежемесячной выплатой дохода в размере до 15% от вложенной суммы. Тело вложений возвращается в конце срока инвестирования
