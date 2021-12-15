@@ -1,5 +1,5 @@
 .how {
-  margin-bottom: 160px;
+
 
   &__title {
     margin-bottom: 60px;
@@ -47,6 +47,14 @@
       }
     }
   }
+
+  @include mw($tb) {
+    margin-bottom: 60px;
+  }
+}
+
+.mb160 {
+  margin-bottom: 160px;
 
   @include mw($tb) {
     margin-bottom: 60px;
@@ -141,10 +149,10 @@
 }
 
 .slick-prev {
-  left: 10px;
+  left: 15px;
   transform: translateY(-50%) rotate(180deg);
 }
 
 .slick-next {
-  right: 10px;
+  right: 15px;
 }

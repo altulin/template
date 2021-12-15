@@ -1,0 +1,152 @@
+.news {
+
+  &__inner {}
+
+  &__title-block {}
+
+  &__title {}
+
+  &__list {}
+}
+
+.title-block {
+  margin-bottom: 50px;
+  overflow: hidden;
+  background-image: url("/img/news_bg.png");
+  background-position: right bottom;
+  background-size: contain;
+  background-repeat: no-repeat;
+
+
+
+  &__inner {
+    padding-bottom: 241px;
+    position: relative;
+
+    @include mw($ph) {
+      padding-bottom: 150px;
+    }
+
+    &::after {
+      content: "";
+      position: absolute;
+      height: 1px;
+      width: 100vw;
+      background: rgba(239, 246, 255, 0.15);
+      bottom: 0;
+      left: 15px;
+
+    }
+  }
+}
+
+.news-list {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+
+  @include mw($tb) {
+    padding-left: 0;
+    padding-right: 0;
+    // margin-left: 15px;
+    // margin-right: 15px;
+    border-radius: 8px;
+    overflow: hidden;
+  }
+
+  &__item {
+    width: calc((100% / 3) - (80px / 3));
+    border-radius: 40px;
+    margin-bottom: 40px;
+    overflow: hidden;
+
+    @include mw(1000px) {
+      width: calc((100% / 3) - (24px / 3));
+    }
+
+    @include mw($tb) {
+      border-radius: 8px;
+      padding-left: 10px;
+      padding-right: 10px;
+    }
+  }
+
+  &__wrap {
+    display: flex;
+    justify-content: center;
+    @include padding-top(36px);
+    @include padding-bottom(32px);
+    transition: 0.3s;
+    background: #21212B;
+
+    @include hocus() {
+      & .news-list__link {
+        opacity: 0.6;
+      }
+    }
+
+    @include mw($tb) {
+      border-radius: 8px;
+    }
+  }
+
+  &__inner {
+    max-width: 345px;
+    margin: 0 15px;
+  }
+
+  &__title {
+    font-weight: 600;
+    @include font-size(28px);
+    line-height: 125%;
+    letter-spacing: -0.02em;
+    color: #EFF6FF;
+    margin-bottom: 12px;
+  }
+
+  &__text {
+    @include font("Gilroy");
+    font-size: 17px;
+    line-height: 150%;
+    letter-spacing: -0.02em;
+    color: #7A838D;
+    margin-bottom: auto;
+  }
+
+  &__block {
+    margin-top: 68px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__description {
+    @include font("Gilroy");
+    font-size: 12px;
+    line-height: 100%;
+    display: flex;
+    flex-direction: column;
+    color: #7A838D;
+
+    & span {
+      &+span {
+        margin-top: 8px;
+      }
+    }
+  }
+
+  &__source {}
+
+  &__data {}
+
+  &__link {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background: rgba(239, 246, 255, 0.05);
+    background-image: url("/img/svg/arrow-link.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+    transition: opacity 0.3s;
+  }
+}

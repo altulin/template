@@ -15,6 +15,7 @@ const plugunsJsUsed = [
   `slick_js`,
   `locomotive_scroll`,
   `ionRangesliderJs`,
+  `flextabs_js`,
   // `mmenu_js`,
   // `jquery_modal_js`,
   // `inputmask_js`,
@@ -29,6 +30,7 @@ const plugunsCssUsed = [
   `slick_css`,
   `locomotive_scroll_css`,
   "ionRangesliderCss",
+  // `flextabs_css`,
   // `mmenu_css`,
   // `jquery_modal_css`,
   // `swiper_css`,
@@ -65,6 +67,7 @@ const plugunsJs = new Map([
     `ionRangesliderJs`,
     `node_modules/ion-rangeslider/js/ion.rangeSlider.min.js`,
   ],
+  [`flextabs_js`, `node_modules/flextabs-js/demo/js/jquery.flextabs.js`],
 ]);
 
 const plugunsCss = new Map([
@@ -96,6 +99,10 @@ const plugunsCss = new Map([
   [
     "ionRangesliderCss",
     "node_modules/ion-rangeslider/css/ion.rangeSlider.min.css",
+  ],
+  [
+    `flextabs_css`,
+    `node_modules/flextabs-js/demo/css/jquery.flextabs.theme-default.css`,
   ],
 ]);
 

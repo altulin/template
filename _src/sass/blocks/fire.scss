@@ -23,8 +23,30 @@
 
 
     &--3 {
-      top: 75%;
+      top: 47%;
       left: -30%;
+    }
+
+    &--4 {
+      bottom: -20%;
+      left: -20%;
+
+      @include mw($ph) {
+        width: 100%;
+        bottom: 10%;
+        left: 50%;
+      }
+    }
+
+    &--5 {
+      bottom: -10%;
+      left: 40%;
+
+      @include mw($ph) {
+        width: 100%;
+        bottom: 20%;
+        left: 30%;
+      }
     }
   }
 }

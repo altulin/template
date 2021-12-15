@@ -66,6 +66,7 @@
     "webpack-stream": "^6.1.2"
   },
   "dependencies": {
+    "flextabs-js": "^2.0.0",
     "gulp-sass-glob": "^1.1.0",
     "inputmask": "^5.0.6",
     "ion-rangeslider": "^2.3.1",

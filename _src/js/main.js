@@ -526,6 +526,18 @@ const createSlider = () => {
   }
 };
 
+const createSliderNews = () => {
+  const slider = $(".news-list");
+
+  if (check(slider) && startWidth < 768) {
+    slider.slick({
+      slidesToShow: 1,
+      speed: 600,
+      rows: 0,
+    });
+  }
+};
+
 const makeRange = (num) => {
   const inputRange = $(`#package-${num}`);
 
@@ -594,6 +606,12 @@ const playVideo = () => {
   }
 };
 
+const createAccordion = () => {
+  $("[data-ft]").flexTabs({
+    type: "accordion",
+  });
+};
+
 $(function () {
   // reload();
   // getAccordionNav();
@@ -614,10 +632,12 @@ $(function () {
   // scrollFunction();
 
   // getVideoPromo();
-  resize();
+  // resize();
   createSlider();
+  createSliderNews();
   playVideo();
   makeRange(365);
   makeRange(150);
   getScroll();
+  createAccordion();
 });
