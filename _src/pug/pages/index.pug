@@ -155,7 +155,7 @@ block content
 											| $
 							a.package__link(href="/login") Инвестировать
 
-		section.programsmb160
+		section.programs.mb160
 			.programs__inner.container.container--programs
 				.programs__title-wrap
 					h2.programs__title.title(data-scroll data-scroll-speed="1")  Реферальные программы
@@ -194,15 +194,10 @@ block content
 	section.faq
 		.faq__inner.container
 			h2.faq__title.title Вопросы - ответы
-			.faq__accordion(data-ft)
-				nav
-					each item, i in accordion
-						a.faq__link(href=`#faq-${i+1}`)= item[0]
-
-				div
-					each item, i in accordion
-						.faq__description(id=`#faq-${i+1}`)= item[1]
-
-				//- each item in accordion
-					.faq__term.active= item[0]
-					.faq__description= item[1]
+			.faq__accordion(data-accordion-group)
+				each item, i in accordion
+					.faq__accordion-inner.accordion(data-accordion)
+						.faq__term(data-control)
+							p= item[0]
+						.faq__description(data-content)
+							p= item[1]

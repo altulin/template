@@ -607,8 +607,9 @@ const playVideo = () => {
 };
 
 const createAccordion = () => {
-  $("[data-ft]").flexTabs({
-    type: "accordion",
+  $(".accordion").accordion({
+    transitionSpeed: 600,
+    singleOpen: true,
   });
 };
 
@@ -638,6 +639,6 @@ $(function () {
   playVideo();
   makeRange(365);
   makeRange(150);
-  getScroll();
+  // getScroll();
   createAccordion();
 });
