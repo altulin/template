@@ -1,6 +1,10 @@
 .programs {
   padding-top: 160px;
 
+  @include mw($tb) {
+    padding-top: 60px;
+  }
+
   &__inner {
     display: flex;
     position: relative;

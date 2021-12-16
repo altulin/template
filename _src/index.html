@@ -27,7 +27,7 @@
           <source type="image/webp" srcset="/img/webp/logo.webp 1x, /img/webp/logo@2x.webp 2x" />
           <img class="logo__img" src="/img/logo.png" srcset="/img/logo.png 1x, /img/logo@2x.png 2x" alt="логотип" width="145" height="46" />
         </picture>
-      </a><a class="header__user private link" href="/login/"><span class="private__text">Войти в личный кабинет</span><span class="private__icon">
+      </a><a class="header__user private link" href="/login.html"><span class="private__text">Войти в личный кабинет</span><span class="private__icon">
             <svg class="private__svg__icon" viewBox="0 0 40 40" width="40" height="40">
               <use xlink:href="/img/sprite.svg#user"></use>
             </svg></span></a>
@@ -56,7 +56,7 @@
       </div>
     </section>
     <div class="fire mb160">
-      <section class="how">
+      <section class="how mb160">
         <div class="how__inner container">
           <h2 class="how__title title" data-scroll data-scroll-speed="1">Как это работает?</h2>
           <ul class="how__list" data-scroll data-scroll-speed="2">
@@ -120,7 +120,7 @@
           <img class="fire__img-bg-b" src="/img/fire_bg_bottom.png" srcset="/img/fire_bg_bottom.png 1x, /img/fire_bg_bottom@2x.png 2x" alt="фон" width="937" height="1325" />
         </picture>
       </div>
-      <section class="packages mb160">
+      <section class="packages">
         <div class="packages__inner container">
           <h2 class="packages__title title" data-scroll data-scroll-speed="1">Пакеты инвестирования</h2>
           <div class="packages__list" data-scroll data-scroll-speed="2">
@@ -236,7 +236,7 @@
         </div>
       </section>
     </div>
-    <section class="news">
+    <section class="news mb160">
       <div class="news__inner">
         <div class="news__title-block title-block">
           <div class="title-block__inner container">
@@ -325,7 +325,7 @@
         </ul>
       </div>
     </section>
-    <section class="faq">
+    <section class="faq mb160">
       <div class="faq__inner container">
         <h2 class="faq__title title">Вопросы - ответы</h2>
         <div class="faq__accordion" data-accordion-group>
@@ -389,34 +389,28 @@
       </div>
     </section>
   </main>
-  <footer class="main-footer">
-    <div class="main-footer__inner">
+  <footer class="main-footer" data-scroll data-scroll-repeat>
+    <div class="main-footer__inner container">
       <div class="main-footer__top">
-        <a class="footer__logo" href="#"></a>
+        <a class="main-footer__logo" href="/index.html">
+          <picture>
+            <source type="image/webp" srcset="/img/webp/logo.webp 1x, /img/webp/logo@2x.webp 2x" />
+            <img class="main-footer__logo-img" src="/img/logo.png" srcset="/img/logo.png 1x, /img/logo@2x.png 2x" alt="логотип" width="200" height="63" />
+          </picture>
+        </a>
+        <a class="main-footer__up-link" href="#" aria-label="В начало"></a>
       </div>
-      <div class="main-footer__bottom">
-        <div class="footer__nav-wrap">
-          <nav class="footer__nav footer-nav--left"><a class="footer-nav__link" href="https://mirmebely.ru/about/" target="_blank">О компании</a><a class="footer-nav__link" href="https://mirmebely.ru/catalog/" target="_blank">Каталог мебели</a><a class="footer-nav__link" href="https://mirmebely.ru/brand/"
-            target="_blank">Бренды</a>
-          </nav>
-          <nav class="footer__nav footer-nav--right"><a class="footer-nav__link" href="https://mirmebely.ru/sale/" target="_blank">Распродажа</a><a class="footer-nav__link" href="https://mirmebely.ru/promo/" target="_blank">Акции</a><a class="footer-nav__link" href="https://mirmebely.ru/contact/"
-            target="_blank">Контакты</a>
-          </nav>
+      <div class="main-footer__bottom footer-bottom">
+        <div class="footer-bottom__left"><a class="main-footer__link main-footer__politic hover-opacity" href="/politic.html">Политика конфиденциальности</a><a class="main-footer__link main-footer__agreement" href="/agreement.html">Согласие на обработку персональных&nbsp;данных</a>
+          <a
+          class="main-footer__link main-footer__pay" href="/payment.html">Оплата и возврат</a>
         </div>
-        <div class="footer__copy copy">
-          <p>
-            ©
-            <span data-actual-year>2021</span>
-            Сеть салонов «Мир мебели»
-            <br>Все права защищены
-          </p>
-          <p>Дизайн и разработка<a class="copy__link" href="#"> Jet Marketing</a>
-          </p>
+        <div class="footer-bottom__right pay-sistem">
+          <figure class="pay-sistem-img pay-sistem-img--viza"></figure>
+          <figure class="pay-sistem-img pay-sistem-img--mir"></figure>
+          <figure class="pay-sistem-img pay-sistem-img--mc"></figure>
         </div>
       </div>
-    </div>
-    <div class="footer__up up">
-      <a class="up__link" href="#" aria-label="В начало"></a>
     </div>
   </footer>
   <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU&amp;amp;apikey=cf1c1431-1386-4d22-ba10-fe09e8ffcd25;lang=ru_RU&amp;amp;load=Map,Placemark,Layer"></script>

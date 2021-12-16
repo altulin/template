@@ -456,36 +456,32 @@ const check = (element) => {
 // };
 
 const getScroll = () => {
-  const scroll = new LocomotiveScroll({
-    el: document.querySelector("[data-scroll-container]"),
-    smooth: true,
-  });
+  const scrollElem = $("[data-scroll-container]");
+  const linkToTop = $(".main-footer__up-link");
 
-  scroll.on("scroll", (data) => {
-    const scrollTop = data.scroll.y;
+  if (check(scrollElem)) {
+    const scroll = new LocomotiveScroll({
+      el: document.querySelector("[data-scroll-container]"),
+      smooth: true,
+    });
 
-    if (scrollTop > 100) {
-      $(".header").addClass("header--scroll");
-    } else {
-      $(".header").removeClass("header--scroll");
+    scroll.on("scroll", (data) => {
+      const scrollTop = data.scroll.y;
+
+      if (scrollTop > 100) {
+        $(".header").addClass("header--scroll");
+      } else {
+        $(".header").removeClass("header--scroll");
+      }
+    });
+
+    if (check(linkToTop)) {
+      linkToTop.on("click", () => {
+        scroll.scrollTo("top");
+      });
     }
-  });
+  }
 };
-
-// const getVideoPromo = () => {
-//   const video = $("#video-promo");
-
-//   if (check(video)) {
-//     videojs("video-promo", {
-//       controls: true,
-//       autoplay: false,
-//       preload: "auto",
-//       poster: "../img/poster.png",
-//     });
-
-//     // console.log(videojs.options);
-//   }
-// };
 
 const resize = () => {
   let resizeTimeout;
@@ -599,7 +595,6 @@ const playVideo = () => {
     });
 
     video.on("click", (e) => {
-      console.log("dfd");
       video.trigger("pause");
       btn.removeClass("video__btn--hidden");
     });
@@ -612,6 +607,61 @@ const createAccordion = () => {
     singleOpen: true,
   });
 };
+
+// $(`.form`).on(`submit`, (e) => {
+//   checkValidation(e);
+// });
+
+// const checkValidation = (e) => {
+//   let flag = false;
+//   e.preventDefault();
+//   $(e.target)
+//     .parent()
+//     .find(`input:not(".not-req")`)
+//     .each((i, item) => {
+//       if ($(item).val().length === 0) {
+//         $(item).addClass(`not-valid`);
+//         droppingErr(item);
+//       } else {
+//         flag = true;
+//       }
+//     });
+
+//   if (flag) {
+//     sendForm(e);
+//   }
+// };
+
+// // отправка форм
+// const sendForm = (e) => {
+//   const form = e.target;
+//   const data = $(form).serialize();
+//   $.ajax({
+//     url: "https://httpbin.org/anything",
+//     method: "post",
+//     dataType: "json",
+//     data,
+//     success() {
+//       successHandler(e);
+//     },
+//   });
+// };
+
+// const successHandler = (e) => {
+//   e.target.reset();
+
+//   if (e.target.id === `pay-form`) {
+//     $(`#modal-success`).modal();
+//   }
+
+//   if (e.target.id === `exit-form`) {
+//     window.open("/office-my-learn.html");
+//   }
+
+//   if (e.target.id === `pass-form`) {
+//     window.open("/exit-link.html");
+//   }
+// };
 
 $(function () {
   // reload();
@@ -639,6 +689,6 @@ $(function () {
   playVideo();
   makeRange(365);
   makeRange(150);
-  // getScroll();
+  getScroll();
   createAccordion();
 });
