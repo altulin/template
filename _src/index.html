@@ -27,7 +27,7 @@
           <source type="image/webp" srcset="/img/webp/logo.webp 1x, /img/webp/logo@2x.webp 2x" />
           <img class="logo__img" src="/img/logo.png" srcset="/img/logo.png 1x, /img/logo@2x.png 2x" alt="логотип" width="145" height="46" />
         </picture>
-      </a><a class="header__user private link" href="/login.html"><span class="private__text">Войти в личный кабинет</span><span class="private__icon">
+      </a><a class="header__user private link" href="/form-login.html"><span class="private__text">Войти в личный кабинет</span><span class="private__icon">
             <svg class="private__svg__icon" viewBox="0 0 40 40" width="40" height="40">
               <use xlink:href="/img/sprite.svg#user"></use>
             </svg></span></a>
@@ -165,7 +165,7 @@
                       </p>
                     </div>
                   </div>
-                </div><a class="package__link" href="/login">Инвестировать</a>
+                </div><a class="package__link" href="/form-registration.html">Инвестировать</a>
               </div>
             </div>
             <div class="packages__item package">
@@ -203,13 +203,13 @@
                       </p>
                     </div>
                   </div>
-                </div><a class="package__link" href="/login">Инвестировать</a>
+                </div><a class="package__link" href="/form-registration.html">Инвестировать</a>
               </div>
             </div>
           </div>
         </div>
       </section>
-      <section class="programs mb160">
+      <section class="programs">
         <div class="programs__inner container container--programs">
           <div class="programs__title-wrap">
             <h2 class="programs__title title" data-scroll data-scroll-speed="1"> Реферальные программы</h2>
@@ -388,6 +388,231 @@
         </div>
       </div>
     </section>
+    <section class="modal modal--registration" id="modal-registration">
+      <div class="modal__wrapper container">
+        <div class="modal__header">
+          <a class="modal__logo logo" href="/index.html">
+            <picture>
+              <source type="image/webp" srcset="/img/webp/logo.webp 1x, /img/webp/logo@2x.webp 2x" />
+              <img class="logo__img" src="/img/logo.png" srcset="/img/logo.png 1x, /img/logo@2x.png 2x" alt="логотип" width="145" height="46" />
+            </picture>
+          </a>
+          <h2 class="modal__title">Реферальные программы</h2>
+          <a class="modal__link-close" href="#" rel="modal:close" aria-label="закрыть"></a>
+        </div>
+        <div class="modal__content">
+          <div class="modal__inner tabs-block">
+            <div class="tabs-block__header tabs-header">
+              <h3 class="tabs-header__title">Обьем структуры</h3>
+              <ul class="tabs-header__list" data-tabs="true">
+                <li class="tabs-header__item"><a class="tabs-header__link" href="#tab-1" data-tabby-default>до 20 000 $</a>
+                </li>
+                <li class="tabs-header__item"><a class="tabs-header__link" href="#tab-2">до 30 000 $</a>
+                </li>
+                <li class="tabs-header__item"><a class="tabs-header__link" href="#tab-3">до 40 000 $</a>
+                </li>
+                <li class="tabs-header__item"><a class="tabs-header__link" href="#tab-4">до 50 000 $</a>
+                </li>
+                <li class="tabs-header__item"><a class="tabs-header__link" href="#tab-5">от 50 000 $</a>
+                </li>
+              </ul>
+            </div>
+            <div class="tabs-block__content table level">
+              <div class="table__header table-row table-header">
+                <div class="table-header__item table-row__item level__head">Уровень</div>
+                <div class="table-header__item table-row__item level__investment">% от вложений</div>
+                <div class="table-header__item table-row__item level__pay">% от выплаты</div>
+              </div>
+              <div class="level__content" id="tab-1">
+                <div class="table-row">
+                  <div class="table-row__item level__head">1 уровень</div>
+                  <div class="table-row__item level__investment">1%</div>
+                  <div class="table-row__item level__pay">0.5%</div>
+                </div>
+                <div class="table-row">
+                  <div class="table-row__item level__head">2 уровень</div>
+                  <div class="table-row__item level__investment">1%</div>
+                  <div class="table-row__item level__pay">0.5%</div>
+                </div>
+                <div class="table-row">
+                  <div class="table-row__item level__head">3 уровень</div>
+                  <div class="table-row__item level__investment">1%</div>
+                  <div class="table-row__item level__pay">0.5%</div>
+                </div>
+                <div class="table-row">
+                  <div class="table-row__item level__head">4 уровень</div>
+                  <div class="table-row__item level__investment">1%</div>
+                  <div class="table-row__item level__pay">0.5%</div>
+                </div>
+                <div class="table-row">
+                  <div class="table-row__item level__head">5 уровень</div>
+                  <div class="table-row__item level__investment">1%</div>
+                  <div class="table-row__item level__pay">0.5%</div>
+                </div>
+                <div class="table-row">
+                  <div class="table-row__item level__head">6 уровень</div>
+                  <div class="table-row__item level__investment">1%</div>
+                  <div class="table-row__item level__pay">0.5%</div>
+                </div>
+                <div class="table-row">
+                  <div class="table-row__item level__head">7 уровень</div>
+                  <div class="table-row__item level__investment">1%</div>
+                  <div class="table-row__item level__pay">0.5%</div>
+                </div>
+              </div>
+              <div class="level__content" id="tab-2">
+                <div class="table-row">
+                  <div class="table-row__item level__head">1 уровень</div>
+                  <div class="table-row__item level__investment">1%</div>
+                  <div class="table-row__item level__pay">0.5%</div>
+                </div>
+                <div class="table-row">
+                  <div class="table-row__item level__head">2 уровень</div>
+                  <div class="table-row__item level__investment">1%</div>
+                  <div class="table-row__item level__pay">0.5%</div>
+                </div>
+                <div class="table-row">
+                  <div class="table-row__item level__head">3 уровень</div>
+                  <div class="table-row__item level__investment">1%</div>
+                  <div class="table-row__item level__pay">0.5%</div>
+                </div>
+                <div class="table-row">
+                  <div class="table-row__item level__head">4 уровень</div>
+                  <div class="table-row__item level__investment">1%</div>
+                  <div class="table-row__item level__pay">0.5%</div>
+                </div>
+                <div class="table-row">
+                  <div class="table-row__item level__head">5 уровень</div>
+                  <div class="table-row__item level__investment">1%</div>
+                  <div class="table-row__item level__pay">0.5%</div>
+                </div>
+                <div class="table-row">
+                  <div class="table-row__item level__head">6 уровень</div>
+                  <div class="table-row__item level__investment">1%</div>
+                  <div class="table-row__item level__pay">0.5%</div>
+                </div>
+                <div class="table-row">
+                  <div class="table-row__item level__head">7 уровень</div>
+                  <div class="table-row__item level__investment">1%</div>
+                  <div class="table-row__item level__pay">0.5%</div>
+                </div>
+              </div>
+              <div class="level__content" id="tab-3">
+                <div class="table-row">
+                  <div class="table-row__item level__head">1 уровень</div>
+                  <div class="table-row__item level__investment">1%</div>
+                  <div class="table-row__item level__pay">0.5%</div>
+                </div>
+                <div class="table-row">
+                  <div class="table-row__item level__head">2 уровень</div>
+                  <div class="table-row__item level__investment">1%</div>
+                  <div class="table-row__item level__pay">0.5%</div>
+                </div>
+                <div class="table-row">
+                  <div class="table-row__item level__head">3 уровень</div>
+                  <div class="table-row__item level__investment">1%</div>
+                  <div class="table-row__item level__pay">0.5%</div>
+                </div>
+                <div class="table-row">
+                  <div class="table-row__item level__head">4 уровень</div>
+                  <div class="table-row__item level__investment">1%</div>
+                  <div class="table-row__item level__pay">0.5%</div>
+                </div>
+                <div class="table-row">
+                  <div class="table-row__item level__head">5 уровень</div>
+                  <div class="table-row__item level__investment">1%</div>
+                  <div class="table-row__item level__pay">0.5%</div>
+                </div>
+                <div class="table-row">
+                  <div class="table-row__item level__head">6 уровень</div>
+                  <div class="table-row__item level__investment">1%</div>
+                  <div class="table-row__item level__pay">0.5%</div>
+                </div>
+                <div class="table-row">
+                  <div class="table-row__item level__head">7 уровень</div>
+                  <div class="table-row__item level__investment">1%</div>
+                  <div class="table-row__item level__pay">0.5%</div>
+                </div>
+              </div>
+              <div class="level__content" id="tab-4">
+                <div class="table-row">
+                  <div class="table-row__item level__head">1 уровень</div>
+                  <div class="table-row__item level__investment">1%</div>
+                  <div class="table-row__item level__pay">0.5%</div>
+                </div>
+                <div class="table-row">
+                  <div class="table-row__item level__head">2 уровень</div>
+                  <div class="table-row__item level__investment">1%</div>
+                  <div class="table-row__item level__pay">0.5%</div>
+                </div>
+                <div class="table-row">
+                  <div class="table-row__item level__head">3 уровень</div>
+                  <div class="table-row__item level__investment">1%</div>
+                  <div class="table-row__item level__pay">0.5%</div>
+                </div>
+                <div class="table-row">
+                  <div class="table-row__item level__head">4 уровень</div>
+                  <div class="table-row__item level__investment">1%</div>
+                  <div class="table-row__item level__pay">0.5%</div>
+                </div>
+                <div class="table-row">
+                  <div class="table-row__item level__head">5 уровень</div>
+                  <div class="table-row__item level__investment">1%</div>
+                  <div class="table-row__item level__pay">0.5%</div>
+                </div>
+                <div class="table-row">
+                  <div class="table-row__item level__head">6 уровень</div>
+                  <div class="table-row__item level__investment">1%</div>
+                  <div class="table-row__item level__pay">0.5%</div>
+                </div>
+                <div class="table-row">
+                  <div class="table-row__item level__head">7 уровень</div>
+                  <div class="table-row__item level__investment">1%</div>
+                  <div class="table-row__item level__pay">0.5%</div>
+                </div>
+              </div>
+              <div class="level__content" id="tab-5">
+                <div class="table-row">
+                  <div class="table-row__item level__head">1 уровень</div>
+                  <div class="table-row__item level__investment">1%</div>
+                  <div class="table-row__item level__pay">0.5%</div>
+                </div>
+                <div class="table-row">
+                  <div class="table-row__item level__head">2 уровень</div>
+                  <div class="table-row__item level__investment">1%</div>
+                  <div class="table-row__item level__pay">0.5%</div>
+                </div>
+                <div class="table-row">
+                  <div class="table-row__item level__head">3 уровень</div>
+                  <div class="table-row__item level__investment">1%</div>
+                  <div class="table-row__item level__pay">0.5%</div>
+                </div>
+                <div class="table-row">
+                  <div class="table-row__item level__head">4 уровень</div>
+                  <div class="table-row__item level__investment">1%</div>
+                  <div class="table-row__item level__pay">0.5%</div>
+                </div>
+                <div class="table-row">
+                  <div class="table-row__item level__head">5 уровень</div>
+                  <div class="table-row__item level__investment">1%</div>
+                  <div class="table-row__item level__pay">0.5%</div>
+                </div>
+                <div class="table-row">
+                  <div class="table-row__item level__head">6 уровень</div>
+                  <div class="table-row__item level__investment">1%</div>
+                  <div class="table-row__item level__pay">0.5%</div>
+                </div>
+                <div class="table-row">
+                  <div class="table-row__item level__head">7 уровень</div>
+                  <div class="table-row__item level__investment">1%</div>
+                  <div class="table-row__item level__pay">0.5%</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
   </main>
   <footer class="main-footer" data-scroll data-scroll-repeat>
     <div class="main-footer__inner container">
@@ -401,9 +626,9 @@
         <a class="main-footer__up-link" href="#" aria-label="В начало"></a>
       </div>
       <div class="main-footer__bottom footer-bottom">
-        <div class="footer-bottom__left"><a class="main-footer__link main-footer__politic hover-opacity" href="/politic.html">Политика конфиденциальности</a><a class="main-footer__link main-footer__agreement" href="/agreement.html">Согласие на обработку персональных&nbsp;данных</a>
+        <div class="footer-bottom__left"><a class="main-footer__link main-footer__politic hover-opacity" href="/document-politic.html">Политика конфиденциальности</a><a class="main-footer__link main-footer__agreement" href="/document-agreement.html">Согласие на обработку персональных&nbsp;данных</a>
           <a
-          class="main-footer__link main-footer__pay" href="/payment.html">Оплата и возврат</a>
+          class="main-footer__link main-footer__pay" href="/document-payment.html">Оплата и возврат</a>
         </div>
         <div class="footer-bottom__right pay-sistem">
           <figure class="pay-sistem-img pay-sistem-img--viza"></figure>

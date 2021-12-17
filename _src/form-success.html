@@ -32,22 +32,13 @@
   </header>
   <main class="main-exit">
     <section class="exit container">
-      <form class="exit__form form-exit form" id="exit-form" action="#" method="post" name="exit-form" autocomplete="off">
-        <fieldset class="form-exit__field">
-          <legend class="form-exit__legend size-1">Вход в личный кабинет</legend>
-          <div class="form-exit__box">
-            <label class="form-exit__label"><span>Email</span>
-              <input class="form-exit__input req" type="text" placeholder="Email" name="exit-form-email" required>
-            </label>
-          </div>
-          <div class="form-exit__box">
-            <label class="form-exit__label"><span>Пароль</span>
-              <input class="form-exit__input req" type="password" placeholder="Пароль" name="exit-form-pass" required>
-            </label>
-          </div>
-        </fieldset>
-        <button class="form-exit__btn btn" type="submit">Войти</button><a class="form-exit__forget" href="/forget.html">Забыли пароль?</a>
-      </form>
+      <div class="exit__form form-exit">
+        <div class="form-exit__field">
+          <h3 class="form-exit__legend size-1">Восстановление пароля</h3>
+          <figure class="form-exit__img-wrap"></figure>
+        </div>
+        <p class="form-exit__text">Ссылка для восстановления пароля отправлена на ваш e-mail. Пожалуйста, проверьте почту.</p><a class="form-exit__btn btn" href="/exit.html">Войти</a>
+      </div>
     </section>
   </main>
   <footer class="footer-exit"></footer>

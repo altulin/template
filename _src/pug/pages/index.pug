@@ -105,7 +105,7 @@ block content
 											span 130 500
 											|
 											| $
-							a.package__link(href="/login") Инвестировать
+							a.package__link(href="/form-registration.html") Инвестировать
 
 					.packages__item.package
 						.package__inner
@@ -153,9 +153,9 @@ block content
 											span 129 600
 											|
 											| $
-							a.package__link(href="/login") Инвестировать
+							a.package__link(href="/form-registration.html") Инвестировать
 
-		section.programs.mb160
+		section.programs
 			.programs__inner.container.container--programs
 				.programs__title-wrap
 					h2.programs__title.title(data-scroll data-scroll-speed="1")  Реферальные программы
@@ -201,3 +201,45 @@ block content
 							p= item[0]
 						.faq__description(data-content)
 							p= item[1]
+
+	section.modal.modal--registration#modal-registration
+		.modal__wrapper.container
+			.modal__header
+				a.modal__logo.logo(href="/index.html")
+					+img-retina(`logo`, `png`, `логотип`, `logo__img`, `145`, `46`)
+				h2.modal__title Реферальные программы
+				a.modal__link-close(href="#" rel="modal:close" aria-label="закрыть")
+
+			.modal__content
+				.modal__inner.tabs-block
+					.tabs-block__header.tabs-header
+						h3.tabs-header__title Обьем структуры
+						ul.tabs-header__list(data-tabs='true')
+							each item, i in tabs_item
+								li.tabs-header__item
+									if i === 0
+										a.tabs-header__link(href=`#tab-${i+1}` data-tabby-default)= item
+									else
+										a.tabs-header__link(href=`#tab-${i+1}`)= item
+
+
+
+					.tabs-block__content.table.level
+						.table__header.table-row.table-header
+							each item in table_header_modal
+								.table-header__item.table-row__item(class= item[1])= item[0]
+						each item, i in tabs_item
+							.level__content(id=`tab-${i+1}`)
+
+								while n  < 7
+									- n++
+									.table-row
+										each elem,j in table_header_modal
+											if j === 0
+												.table-row__item(class= elem[1])= `${n} уровень`
+											if j === 1
+												.table-row__item(class= elem[1]) 1%
+											if j === 2
+												.table-row__item(class= elem[1]) 0.5%
+												|
+								- n = 0

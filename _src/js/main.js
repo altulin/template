@@ -455,12 +455,14 @@ const check = (element) => {
 //   }
 // };
 
+let scroll;
+
 const getScroll = () => {
   const scrollElem = $("[data-scroll-container]");
   const linkToTop = $(".main-footer__up-link");
 
   if (check(scrollElem)) {
-    const scroll = new LocomotiveScroll({
+    scroll = new LocomotiveScroll({
       el: document.querySelector("[data-scroll-container]"),
       smooth: true,
     });
@@ -608,60 +610,66 @@ const createAccordion = () => {
   });
 };
 
-// $(`.form`).on(`submit`, (e) => {
-//   checkValidation(e);
-// });
+const successHandler = (e) => {
+  e.target.reset();
 
-// const checkValidation = (e) => {
-//   let flag = false;
-//   e.preventDefault();
-//   $(e.target)
-//     .parent()
-//     .find(`input:not(".not-req")`)
-//     .each((i, item) => {
-//       if ($(item).val().length === 0) {
-//         $(item).addClass(`not-valid`);
-//         droppingErr(item);
-//       } else {
-//         flag = true;
-//       }
-//     });
+  // if (e.target.id === `pay-form`) {
+  //   $(`#modal-success`).modal();
+  // }
 
-//   if (flag) {
-//     sendForm(e);
-//   }
-// };
+  if (e.target.id === `exit-form`) {
+    window.open("/office-my-learn.html");
+  }
+
+  if (e.target.id === `pass-form`) {
+    window.open("/form-success.html");
+  }
+
+  if (e.target.id === `registration-form`) {
+    //
+  }
+};
 
 // // отправка форм
-// const sendForm = (e) => {
-//   const form = e.target;
-//   const data = $(form).serialize();
-//   $.ajax({
-//     url: "https://httpbin.org/anything",
-//     method: "post",
-//     dataType: "json",
-//     data,
-//     success() {
-//       successHandler(e);
-//     },
-//   });
-// };
+const sendForm = (e) => {
+  const form = e.target;
+  const data = $(form).serialize();
+  $.ajax({
+    url: "https://httpbin.org/anything",
+    method: "post",
+    dataType: "json",
+    data,
+    success() {
+      successHandler(e);
+    },
+  });
+};
 
-// const successHandler = (e) => {
-//   e.target.reset();
+const makeFormEvent = () => {
+  const form = $(".form");
+  if (check(form)) {
+    form.on(`submit`, (e) => {
+      e.preventDefault();
+      sendForm(e);
+    });
+  }
+};
 
-//   if (e.target.id === `pay-form`) {
-//     $(`#modal-success`).modal();
-//   }
+const createModalReg = () => {
+  const link = $(".programs__link");
+  if (check(link)) {
+    link.on("click", () => {
+      // scroll.stop();
+      $("#modal-registration").modal();
+      $(".modal__link-close").on("click", () => {
+        $("#modal-registration").close();
+        // scroll.start();
+      });
+    });
+  }
+};
 
-//   if (e.target.id === `exit-form`) {
-//     window.open("/office-my-learn.html");
-//   }
-
-//   if (e.target.id === `pass-form`) {
-//     window.open("/exit-link.html");
-//   }
-// };
+const tabs = new Tabby("[data-tabs]");
 
 $(function () {
   // reload();
@@ -689,6 +697,8 @@ $(function () {
   playVideo();
   makeRange(365);
   makeRange(150);
-  getScroll();
+  // getScroll();
   createAccordion();
+  makeFormEvent();
+  createModalReg();
 });
