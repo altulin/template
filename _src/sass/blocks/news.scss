@@ -1,14 +1,3 @@
-.news {
-
-  &__inner {}
-
-  &__title-block {}
-
-  &__title {}
-
-  &__list {}
-}
-
 .title-block {
   margin-bottom: 50px;
   overflow: hidden;
@@ -134,10 +123,6 @@
       }
     }
   }
-
-  &__source {}
-
-  &__data {}
 
   &__link {
     width: 50px;

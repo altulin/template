@@ -1,0 +1,151 @@
+.office-header {
+  background-color: #fff;
+
+  &__inner {
+    display: flex;
+    justify-content: flex-end;
+    padding-top: 23px;
+    padding-bottom: 23px;
+
+    @include mw(1000) {
+      justify-content: space-between;
+      padding-top: 20px;
+      padding-bottom: 21px;
+    }
+  }
+
+  &__link {
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 14px;
+    color: #808080;
+    display: block;
+
+    &-open {
+      display: none;
+      align-items: center;
+
+      @include mw(1000) {
+        display: flex;
+      }
+
+      & span {
+        @include vh();
+      }
+    }
+
+    &-close {
+      display: flex;
+      align-items: center;
+
+      & span {
+        @include vh();
+      }
+    }
+  }
+
+  &__icon-open {
+    stroke: #060606;
+    width: 16px;
+    height: 14px;
+  }
+
+  &__icon-close {
+    stroke: #060606;
+    width: 16px;
+    height: 16px;
+  }
+
+  &__list {
+    display: flex;
+    align-items: center;
+  }
+
+  &__item {
+    &--visible {
+      display: none;
+    }
+
+    &--exit {
+      margin-left: 80px;
+    }
+  }
+
+  &__logo {
+    display: none;
+    margin-left: auto;
+    margin-right: auto;
+    transform: translateX(-8px);
+
+    @include mw(1000) {
+      display: block;
+    }
+  }
+}
+
+.office-wide {
+  @include margin-left(4rem);
+  @include margin-right(4rem);
+
+  @include mw(1440) {
+    margin-left: 15px;
+    margin-right: 15px;
+  }
+}
+
+.hidden {
+  display: none;
+}
+
+.mm-ocd {
+  top: 60px;
+}
+
+.mm-ocd__content {
+  width: 100%;
+  max-width: 600px;
+}
+
+.mm-ocd__backdrop {
+  min-width: auto;
+  max-width: none;
+  width: calc(100% - 600px);
+}
+
+.mm-spn.mm-spn--navbar ul {
+  top: 0;
+}
+
+.mm-spn a {
+  color: #575b64;
+  font-weight: 600;
+  font-size: 1rem;
+  line-height: 1.1875rem;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  padding-left: 30px;
+}
+
+.mm-spn li:after {
+  content: none;
+}
+
+.mm-spn li {
+  border-bottom: .5px solid #e4e4e4;
+}
+
+.mm-spn.mm-spn--light {
+  background-color: #fff;
+}
+
+.office-header__link--active {
+  &::after {
+    width: 5px;
+    height: 60px;
+    left: 0;
+    top: 0;
+    background: #9374f0;
+    position: absolute;
+    content: "";
+  }
+}

@@ -10,7 +10,7 @@ const {
   autoprefixer,
   rename,
   cleancss,
-  gcmq,
+  // gcmq,
   gulpif,
   sassGlob,
   gulp: { src, dest },

@@ -939,7 +939,7 @@ const successHandler = (e) => {
   // }
 
   if (e.target.id === `exit-form`) {
-    window.open("/office-my-learn.html");
+    window.open("/office-index.html");
   }
 
   if (e.target.id === `pass-form`) {
@@ -990,7 +990,13 @@ const createModalReg = () => {
   }
 };
 
-const tabs = new Tabby("[data-tabs]");
+const creatTabs = () => {
+  const tabsBlock = $("[data-tabs]");
+
+  if (check(tabsBlock)) {
+    const tabs = new Tabby("[data-tabs]");
+  }
+};
 
 $(function () {
   // reload();
@@ -1022,6 +1028,7 @@ $(function () {
   createAccordion();
   makeFormEvent();
   createModalReg();
+  creatTabs();
 });
 
 //# sourceMappingURL=script.js.map
