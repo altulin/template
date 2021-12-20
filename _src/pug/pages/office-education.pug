@@ -1,0 +1,25 @@
+extends ../templates/_office.pug
+include ../helpers/mixins.pug
+
+block asside-active
+	-const active = 4;
+
+block content
+	section.education.pt40
+		.education__inner.office-container
+			h2.education__title.office-title Обучение партнеров
+
+			ul.education__list
+				while n  < 6
+					- n++
+					li.education__item
+						a.education__link.glightbox3(href="/video/test.mp4" data-gallery=`gallery-${n}`)
+							figure.education__img-wrap
+								+img-retina(`education-img`, `png`, `кнопка видео`, `education__img`, `330`, `220`)
+								figure.education__btn
+							.education__text Что такое мастернода и какой доход она принеceт за 12 месяцев инвестиций
+							.education__block
+								span.education__theme Спорт
+								span.education__date 01 декабря 2021 г.
+
+				-n=0

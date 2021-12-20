@@ -41,4 +41,6 @@ const production = series(
   series(getCopying, creteArchive)
 );
 
-export { development, production };
+const test = series(getStyleFile);
+
+export { development, production, test };

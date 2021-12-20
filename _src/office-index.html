@@ -30,13 +30,13 @@
       </a>
       <nav class="body-asside__nav asside-nav">
         <ul class="asside-nav__list">
-          <li class="asside-nav__item"><a class="asside-nav__link" href="/office-my-learn.html">Мое обучение</a>
+          <li class="asside-nav__item"><a class="asside-nav__link" href="/office-packages.html">Пакеты инвестиций</a>
           </li>
-          <li class="asside-nav__item"><a class="asside-nav__link" href="/office-programs.html">Программы обучения</a>
+          <li class="asside-nav__item"><a class="asside-nav__link" href="/office-programs.html">Реферальная программа</a>
           </li>
           <li class="asside-nav__item"><a class="asside-nav__link" href="/reward.html">Вывод вознаграждения</a>
           </li>
-          <li class="asside-nav__item"><a class="asside-nav__link" href="/office-referal.html">Реферальная программа</a>
+          <li class="asside-nav__item"><a class="asside-nav__link" href="/office-education.html">Обучение партнеров</a>
           </li>
         </ul>
       </nav>
@@ -44,19 +44,30 @@
   </div>
   <div class="office-body__right">
     <header class="office-header">
-      <div class="office-header__inner office-wide"><a class="office-header__link-open" href="#office-header-nav"><span>Открыть меню</span></a><a class="office-header__link-close hidden" href="#office-header-nav"><span>Закрыть меню</span></a>
+      <div class="office-header__inner office-wide"><a class="office-header__link-open" href="#office-header-nav"><span>Открыть меню</span>
+            <svg class="office-header__icon-open__icon" viewBox="0 0 16 14" width="16" height="14">
+              <use xlink:href="/img/sprite.svg#burger"></use>
+            </svg></a><a class="office-header__link-close hidden" href="#office-header-nav"><span>Закрыть меню</span>
+            <svg class="office-header__icon-close__icon" viewBox="0 0 16 16" width="16" height="16">
+              <use xlink:href="/img/sprite.svg#menu-close"></use>
+            </svg></a>
         <a class="office-header__logo logo" href="index.html">
-          <figure class="logo__img-wrap"></figure>
+          <figure class="logo__img-wrap">
+            <picture>
+              <source type="image/webp" srcset="/img/webp/logo.webp 1x, /img/webp/logo@2x.webp 2x" />
+              <img class="logo__img" src="/img/logo.png" srcset="/img/logo.png 1x, /img/logo@2x.png 2x" alt="логотип" width="126" height="40" />
+            </picture>
+          </figure>
         </a>
         <nav class="office-header__nav" id="office-header-nav">
           <ul class="office-header__list">
-            <li class="office-header__item office-header__item--visible"><a class="office-header__link" href="/office-my-learn.html">Мое обучение</a>
+            <li class="office-header__item office-header__item--visible"><a class="office-header__link" href="/office-packages.html">Пакеты инвестиций</a>
             </li>
-            <li class="office-header__item office-header__item--visible"><a class="office-header__link" href="/office-programs.html">Программы обучения</a>
+            <li class="office-header__item office-header__item--visible"><a class="office-header__link" href="/office-programs.html">Реферальная программа</a>
             </li>
             <li class="office-header__item office-header__item--visible"><a class="office-header__link" href="/reward.html">Вывод вознаграждения</a>
             </li>
-            <li class="office-header__item office-header__item--visible"><a class="office-header__link" href="/office-referal.html">Реферальная программа</a>
+            <li class="office-header__item office-header__item--visible"><a class="office-header__link" href="/office-education.html">Обучение партнеров</a>
             </li>
             <li class="office-header__item"><a class="office-header__link office-header__link--my" href="/office-my-data.html">Мои данные</a>
             </li>
@@ -68,63 +79,65 @@
     </header>
     <main class="office-main">
       <section class="my-program office-container">
-        <h2 class="my-program__title office-title">Ваша программа обучения</h2>
-        <a class="my-program__link" href="/office-program.html">
-          <figure class="my-program__img-wrap tablet-hidden"></figure>
-          <div class="my-program__content pay-content">
-            <figure class="my-program__img-wrap tablet-visibility"></figure>
-            <div class="pay-content__title">Программа: Старт</div>
-            <div class="pay-content__cont">
-              <div class="pay-content__text">За последний год инвесторы получили от капиталовложений в биткоин невероятные доходы – более 700%. Такую прибыльность до сих пор не показывала ни одна валюта. Крайне высокая волатильность в сочетании с большим потенциалом.</div>
-              <div class="pay-content__inner">
-                <div class="pay-content__moduls">
-                  <div class="pay-content__moduls-block">
-                    <p class="size-1">4 модуля</p>
-                  </div>
-                  <div class="pay-content__moduls-exercise">
-                    <p class="size-1">12 занятий</p>
-                  </div>
-                </div>
-                <p class="pay-content__bonus">Денежный бонус за успешное прохождение программы 5000 ₽</p>
+        <h2 class="my-program__title office-title">Статистика доходов</h2>
+        <div class="my-program__inner">
+          <div class="my-program__left graph">
+            <div class="graph__wrap">
+              <h3 class="graph__title">Доходность ваших инвестиций</h3>
+              <div class="graph__body" id="chartContainer"></div>
+              <div class="graph__down">
+                <div class="graph__val graph-val"><span class="graph-val__title">Доходность:</span><span class="graph-val__content"><span class="graph-val__sum">54 200 $</span><span class="graph-val__direct direct direct--green">7,00%</span></span>
+                </div><a class="graph__buy" href="/office-packages.html">Купить пакет</a>
               </div>
             </div>
           </div>
-        </a>
-        <div class="my-program__stat stat stat--gorizontal">
-          <h3 class="stat__title size-1">Статистика прохождения<br> программы обучения:</h3>
-          <ul class="stat__list stat__list--gorizontal">
-            <li class="stat__item"><span class="stat__term">Пройдено:</span><span class="stat__def size-1">1 из 4 модулей</span>
-            </li>
-            <li class="stat__item"><span class="stat__term">Изучено:</span><span class="stat__def size-1">5 из 12 занятий</span>
-            </li>
-            <li class="stat__item"><span class="stat__term">До получения вознагрождения:</span><span class="stat__def stat__def--time size-1">24 дня 12 часов 20 минут</span>
-            </li>
-          </ul>
+          <div class="my-program__right my-program-right">
+            <div class="my-program-right__title">Статистика дохода ваших пакетов инвестиций</div>
+            <div class="my-program-right__accordion info-accordion">
+              <ul class="info-accordion__list" data-accordion-group>
+                <li class="info-accordion__item accordion" data-accordion>
+                  <div class="info-accordion__link" data-control><span class="info-accordion-link__title">Пакет инвестирования:</span><span class="info-accordion-link__name">Пакет 365</span>
+                  </div>
+                  <div class="my-program-right__cont cont-accordion" data-content>
+                    <ul class="cont-accordion__list">
+                      <li class="cont-accordion__item"><span class="cont-accordion__term">Cумма инвестиций</span><span class="cont-accordion__description">50 000$</span>
+                      </li>
+                      <li class="cont-accordion__item"><span class="cont-accordion__term">Дата подключения:</span><span class="cont-accordion__description">12.12.2021</span>
+                      </li>
+                      <li class="cont-accordion__item"><span class="cont-accordion__term">Доход текущий месяц:</span><span class="cont-accordion__description">1 000 $<span class="cont-accordion__direct direct direct--green">7,00%</span></span>
+                      </li>
+                      <li class="cont-accordion__item"><span class="cont-accordion__term">Доход за все время:</span><span class="cont-accordion__description">12 000 $<span class="cont-accordion__direct direct direct--red">7,00%</span></span>
+                      </li>
+                      <li class="cont-accordion__item"><span class="cont-accordion__term">До выплаты вознаграждения осталось:</span><span class="cont-accordion__description">14 дней 21 час 59 минут</span>
+                      </li>
+                    </ul>
+                  </div>
+                </li>
+                <li class="info-accordion__item accordion" data-accordion>
+                  <div class="info-accordion__link" data-control><span class="info-accordion-link__title">Пакет инвестирования:</span><span class="info-accordion-link__name">Пакет 150</span>
+                  </div>
+                  <div class="my-program-right__cont cont-accordion" data-content>
+                    <ul class="cont-accordion__list">
+                      <li class="cont-accordion__item"><span class="cont-accordion__term">Cумма инвестиций</span><span class="cont-accordion__description">50 000$</span>
+                      </li>
+                      <li class="cont-accordion__item"><span class="cont-accordion__term">Дата подключения:</span><span class="cont-accordion__description">12.12.2021</span>
+                      </li>
+                      <li class="cont-accordion__item"><span class="cont-accordion__term">Доход текущий месяц:</span><span class="cont-accordion__description">1 000 $<span class="cont-accordion__direct direct direct--green">7,00%</span></span>
+                      </li>
+                      <li class="cont-accordion__item"><span class="cont-accordion__term">Доход за все время:</span><span class="cont-accordion__description">12 000 $<span class="cont-accordion__direct direct direct--red">7,00%</span></span>
+                      </li>
+                      <li class="cont-accordion__item"><span class="cont-accordion__term">До выплаты вознаграждения осталось:</span><span class="cont-accordion__description">14 дней 21 час 59 минут</span>
+                      </li>
+                    </ul>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </div>
         </div>
-      </section>
-      <section class="referral office-container">
-        <h2 class="referral__title office-title">Реферальная программа</h2>
-        <a class="referral__inner" href="/office-referal.html">
-          <p class="referral__title-text size-1">Делитесь с другими курсами BTC Trust
-            <br>и получайте за это вознаграждение.</p>
-          <p class="referral__text">Реферальная программа BTC Trust предоставляет возможность всем желающим зарабатывать 10% от депозитов людей, которых вы пригласили.</p>
-          <p class="referral__text">Вы пригласили друга, он приобрёл обучающую программу на сумму 10 000 ₽, вы получаете 1 000 ₽.</p>
-        </a>
       </section>
     </main>
-    <footer class="office-footer footer-down">
-      <div class="footer-down__inner container">
-        <p class="footer-down__copy">© 2021 «BTC trust»</p>
-        <div class="footer-down__docs"><a class="footer-down__link hover-opacity" href="/payment.html" target="_blank">Оплата и возврат</a><a class="footer-down__link hover-opacity" href="/offer.html" target="_blank">Договор оферта</a><a class="footer-down__link hover-opacity" href="/politics.html"
-          target="_blank">Политика конфиденциальности</a>
-        </div>
-        <ul class="footer-down__pay pay">
-          <li class="pay__item pay__item--visa"></li>
-          <li class="pay__item pay__item--mc"></li>
-          <li class="pay__item pay__item--mir"></li>
-        </ul>
-      </div>
-    </footer>
+    <footer class="office-footer footer-down"></footer>
   </div>
   <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU&amp;amp;apikey=cf1c1431-1386-4d22-ba10-fe09e8ffcd25;lang=ru_RU&amp;amp;load=Map,Placemark,Layer"></script>
   <script src="/js/script.js"></script>

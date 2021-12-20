@@ -1,5 +1,10 @@
 <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><symbol id="arrow-link">
     <path d="M1 6.084h13.68m0 0L9.816 1m4.864 5.084L9.816 11.17" stroke-width="2" stroke-linecap="round"/>
+</symbol><symbol id="burger">
+    <path d="M1 1h14M1 7h14M1 13h14" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+</symbol><symbol id="menu-close">
+    <rect width="20" height="2" rx="1" transform="rotate(45 .536 1.778)"/>
+    <rect width="20" height="2" rx="1" transform="rotate(-45 17.278 6.571)"/>
 </symbol><symbol id="user" viewBox="0 0 64 64">
     <style>
         .st0{fill:#134563}

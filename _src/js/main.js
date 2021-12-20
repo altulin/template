@@ -677,6 +677,115 @@ const creatTabs = () => {
   }
 };
 
+const stickyHeader = () => {
+  const header = $("#header");
+  if (check(header)) {
+    header.sticky({
+      topSpacing: 0,
+      className: "header--scroll",
+      zIndex: 5,
+    });
+  }
+};
+
+if ($("#office-header-nav").length > 0) {
+  const menu = new MmenuLight(
+    document.querySelector("#office-header-nav"),
+    "(max-width: 1000px)"
+  );
+
+  const navigator = menu.navigation({
+    title: "",
+  });
+
+  const drawer = menu.offcanvas();
+
+  $(`.office-header__link-open`).on(`click`, (e) => {
+    e.preventDefault();
+    drawer.open();
+    $(`.office-header__link-open`).addClass(`hidden`);
+    $(`.office-header__link-close`).removeClass(`hidden`);
+  });
+
+  $(`.office-header__link-close`).on(`click`, (e) => {
+    e.preventDefault();
+    drawer.close();
+    $(`.office-header__link-close`).addClass(`hidden`);
+    $(`.office-header__link-open`).removeClass(`hidden`);
+  });
+
+  $(`.mm-ocd__backdrop`).on(`click`, () => {
+    $(`.office-header__link-close`).addClass(`hidden`);
+    $(`.office-header__link-open`).removeClass(`hidden`);
+  });
+}
+
+const createChart = () => {
+  const chart = $("#chartContainer");
+
+  if (check(chart)) {
+    const chartNew = new CanvasJS.Chart("chartContainer", {
+      animationEnabled: true,
+      title: {
+        // text: "Доходность ваших инвестиций",
+      },
+      backgroundColor: "#21212B",
+      axisY: {
+        title: "",
+        labelFontColor: "#2C2F34",
+
+        // interlacedColor: "rgb(255,250,250)",
+        gridColor: "#2C2F34",
+      },
+      axisX: {
+        labelFontColor: "#2C2F34",
+      },
+
+      data: [
+        {
+          type: "splineArea",
+          color: "rgba(42, 255, 37, 1)",
+          markerSize: 3,
+          xValueFormatString: "YYYY",
+          yValueFormatString: "$#,##0.##",
+          dataPoints: [
+            { x: new Date(2000, 0), y: 3289 },
+            { x: new Date(2001, 0), y: 3830 },
+            { x: new Date(2002, 0), y: 2009 },
+            { x: new Date(2003, 0), y: 2840 },
+            { x: new Date(2004, 0), y: 2396 },
+            { x: new Date(2005, 0), y: 1613 },
+            { x: new Date(2006, 0), y: 2821 },
+            { x: new Date(2007, 0), y: 2000 },
+            { x: new Date(2008, 0), y: 1397 },
+            { x: new Date(2009, 0), y: 2506 },
+            { x: new Date(2010, 0), y: 2798 },
+            { x: new Date(2011, 0), y: 3386 },
+            { x: new Date(2012, 0), y: 6704 },
+            { x: new Date(2013, 0), y: 6026 },
+            { x: new Date(2014, 0), y: 2394 },
+            { x: new Date(2015, 0), y: 1872 },
+            { x: new Date(2016, 0), y: 2140 },
+          ],
+        },
+      ],
+    });
+    chartNew.render();
+  }
+};
+
+const createLightbox = () => {
+  const link = $(".education__link");
+
+  if (check(link)) {
+    const lightbox = GLightbox({
+      selector: ".education__link",
+      openEffect: "fade",
+      closeEffect: "fade",
+    });
+  }
+};
+
 $(function () {
   // reload();
   // getAccordionNav();
@@ -708,4 +817,7 @@ $(function () {
   makeFormEvent();
   createModalReg();
   creatTabs();
+  stickyHeader();
+  createChart();
+  createLightbox();
 });

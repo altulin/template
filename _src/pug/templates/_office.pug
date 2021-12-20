@@ -1,5 +1,6 @@
 doctype html
 html(lang="ru")
+	include ../helpers/arrays
 	include ../modules/_head
 	block asside-power
 
@@ -15,15 +16,16 @@ html(lang="ru")
 
 					a.office-header__link-open(href="#office-header-nav")
 						span Открыть меню
-						//- +svg_my(`burger`, `office-header__icon-open`)
+						+svg(`burger`,16,14, `office-header__icon-open`)
 
 					a.office-header__link-close.hidden(href="#office-header-nav")
 						span Закрыть меню
-						//- +svg_my(`menu-close`, `office-header__icon-close`)
+						+svg(`menu-close`,16,16, `office-header__icon-close`)
 
 					a.office-header__logo.logo(href="index.html")
 						figure.logo__img-wrap
 							//- +img(`logo`, `png`, `logo`, `logo__img`, `107`)
+							+img-retina(`logo`, `png`, `логотип`, `logo__img`, `126`, `40`)
 
 					nav.office-header__nav#office-header-nav
 						ul.office-header__list

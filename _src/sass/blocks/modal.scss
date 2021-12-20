@@ -9,7 +9,6 @@
   background-image: url("/img/modal-bg.png");
   background-size: cover;
 
-  &--registration {}
 
   &__wrapper {
     padding-top: 104px;
@@ -28,7 +27,6 @@
     }
   }
 
-  &__logo {}
 
   &__title {
     font-weight: 600;
@@ -84,11 +82,6 @@
   }
 }
 
-.logo {
-
-  &__img {}
-}
-
 .tabs-block {
 
   &__header {
@@ -104,7 +97,6 @@
     }
   }
 
-  &__content {}
 }
 
 .tabs-header {
@@ -161,10 +153,6 @@
   }
 }
 
-.table {
-
-  &__header {}
-}
 
 .level {
   color: #7A838D;
@@ -206,7 +194,6 @@
   padding-bottom: 24px;
   border-bottom: 1px solid #373741;
 
-  &__item {}
 }
 
 .table-header {
@@ -223,9 +210,6 @@
   background: #181820;
 }
 
-.blocker:before {
-  // content: none;
-}
 
 [role=tab][aria-selected=true] {
   background-color: #272732;

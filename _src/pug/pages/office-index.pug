@@ -6,45 +6,55 @@ block asside-active
 
 block content
 	section.my-program.office-container
-		h2.my-program__title.office-title Ваша программа обучения
-		a.my-program__link(href="/office-program.html")
+		h2.my-program__title.office-title Статистика доходов
 
-			figure.my-program__img-wrap.tablet-hidden
-				//- +img(`prog`, `png`, ``, `my-program__img`, `220`)
+		.my-program__inner
 
-			.my-program__content.pay-content
+			.my-program__left.graph
+				.graph__wrap
+					h3.graph__title Доходность ваших инвестиций
+					.graph__body#chartContainer
+					.graph__down
+						.graph__val.graph-val
+							span.graph-val__title Доходность:
+							span.graph-val__content
+								span.graph-val__sum 54 200 $
+								span.graph-val__direct.direct.direct--green 7,00%
 
-				figure.my-program__img-wrap.tablet-visibility
-					//- +img(`prog`, `png`, ``, `my-program__img`, `220`)
+						a.graph__buy(href="/office-packages.html") Купить пакет
 
-				.pay-content__title Программа: Старт
+			.my-program__right.my-program-right
+				.my-program-right__title Статистика дохода ваших пакетов инвестиций
+				.my-program-right__accordion.info-accordion
 
-				.pay-content__cont
-					.pay-content__text За последний год инвесторы получили от капиталовложений в биткоин невероятные доходы – более 700%. Такую прибыльность до сих пор не показывала ни одна валюта. Крайне высокая волатильность в сочетании с большим потенциалом.
-					.pay-content__inner
-						.pay-content__moduls
-							.pay-content__moduls-block
-								p.size-1 4 модуля
-							.pay-content__moduls-exercise
-								p.size-1 12 занятий
-						p.pay-content__bonus Денежный бонус за успешное прохождение программы 5000 ₽
 
-		.my-program__stat.stat.stat--gorizontal
-			h3.stat__title.size-1 Статистика прохождения<br> программы обучения:
-			ul.stat__list.stat__list--gorizontal
-				li.stat__item
-					span.stat__term Пройдено:
-					span.stat__def.size-1 1 из 4 модулей
-				li.stat__item
-					span.stat__term Изучено:
-					span.stat__def.size-1 5 из 12 занятий
-				li.stat__item
-					span.stat__term До получения вознагрождения:
-					span.stat__def.stat__def--time.size-1 24 дня 12 часов 20 минут
+					ul.info-accordion__list(data-accordion-group)
+						while n  < 2
+							- n++
+							li.info-accordion__item.accordion(data-accordion)
+								.info-accordion__link(data-control)
+									span.info-accordion-link__title Пакет инвестирования:
+									span.info-accordion-link__name= (n==1?'Пакет 365' :'Пакет 150')
 
-	section.referral.office-container
-		h2.referral__title.office-title Реферальная программа
-		a.referral__inner(href="/office-referal.html")
-			p.referral__title-text.size-1 Делитесь с другими курсами BTC Trust<br>и получайте за это вознаграждение.
-			p.referral__text Реферальная программа BTC Trust предоставляет возможность всем желающим зарабатывать 10% от депозитов людей, которых вы пригласили.
-			p.referral__text  Вы пригласили друга, он приобрёл обучающую программу на сумму 10 000 ₽, вы получаете 1 000 ₽.
+								.my-program-right__cont.cont-accordion(data-content)
+									ul.cont-accordion__list
+										li.cont-accordion__item
+											span.cont-accordion__term Cумма инвестиций
+											span.cont-accordion__description 50 000$
+										li.cont-accordion__item
+											span.cont-accordion__term Дата подключения:
+											span.cont-accordion__description 12.12.2021
+										li.cont-accordion__item
+											span.cont-accordion__term Доход текущий месяц:
+											span.cont-accordion__description 1 000 $
+												span.cont-accordion__direct.direct.direct--green 7,00%
+										li.cont-accordion__item
+											span.cont-accordion__term Доход за все время:
+											span.cont-accordion__description 12 000 $
+												span.cont-accordion__direct.direct.direct--red 7,00%
+										li.cont-accordion__item
+											span.cont-accordion__term До выплаты вознаграждения осталось:
+											span.cont-accordion__description 14 дней 21 час 59 минут
+
+
+						- n = 0
