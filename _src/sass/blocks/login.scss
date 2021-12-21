@@ -84,7 +84,7 @@
   &__label {
     display: block;
 
-    & span {
+    & span:not(.withdrawal__label) {
       position: absolute;
       clip: rect(0 0 0 0);
       width: 1px;

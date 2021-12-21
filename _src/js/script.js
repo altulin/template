@@ -2235,14 +2235,13 @@ const makeFormEvent = () => {
 };
 
 const createModalReg = () => {
-  const link = $(".programs__link");
+  const link = $(".programs__link, .add__link");
   if (check(link)) {
-    link.on("click", () => {
-      // scroll.stop();
+    link.on("click", (e) => {
+      e.preventDefault();
       $("#modal-registration").modal();
       $(".modal__link-close").on("click", () => {
-        $("#modal-registration").close();
-        // scroll.start();
+        $.modal.close();
       });
     });
   }
@@ -2264,6 +2263,20 @@ const stickyHeader = () => {
       className: "header--scroll",
       zIndex: 5,
     });
+  }
+};
+
+const stikyLink = () => {
+  const link = $(".ref-link");
+
+  if (check(link)) {
+    link.sticky({
+      topSpacing: 0,
+      className: "header--scroll",
+      zIndex: 5,
+    });
+
+
   }
 };
 

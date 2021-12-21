@@ -1,0 +1,150 @@
+extends ../templates/_office.pug
+include ../helpers/mixins.pug
+
+block asside-active
+	-const active = 2;
+
+block content
+	section.referral-prog.pt40
+		.referral-prog__inner.office-container
+			h2.referral-prog__title.title.office-title Реферальная программа
+			.referral-prog__content
+				.referral-prog__content-left.left-content
+					.left-content__add.add
+						.add__top
+							h3.add__title Получайте дополнительный доход
+							p.add__text Finance Plus предоставляет возможность всем желающим зарабатывать до 12% от вложений приглашенных вами новых участников и 2% от каждой выплаты процентов по пакету инвестирования
+							ul.add__list
+								li.add__item
+									p Разовая выплата от вложения приглашенного вами нового участника
+								li.add__item
+									p Ежемесячная выплата
+										br
+										| от всех вложений
+										br
+										| вашей структуры
+						.add__bottom
+
+							a.add__link(href="# ") Условия программы
+
+					.left-content__structure.structure
+						h3.structure__title.title.office-title Ваша реферальная структура на&nbsp;1&nbsp;уровне
+						.structure__wrap
+							ul.structure__list
+								li.structure__item.structure__item--header
+									span.structure__point.structure__point--header.structure__point--id
+										| ID
+									span.structure__point.structure__point--header.structure__point--name
+										| ФИО
+									span.structure__point.structure__point--header.structure__point--turn
+										| Оборот сруктуры
+									span.structure__point.structure__point--header.structure__point--date
+										| Дата
+
+								while n < 4
+									-n++
+									li.structure__item
+										a.structure__link(href="#")
+											span.structure__point.structure__point--id
+												| 245678
+											span.structure__point.structure__point--name
+												| Иванов Иван Иванович
+											span.structure__point.structure__point--turn
+												| 5 000 $
+											span.structure__point.structure__point--date
+												| 24.10.21
+
+								-n =0
+
+
+
+				.referral-prog__content-right.right-content
+					.right-content__ref-link.ref-link
+						.ref-link__inner
+							h3.ref-link__title Ваша реферальная ссылка
+							p.ref-link__link Financeplus.ru/referal/12345
+							ul.ref-link__list
+								li.ref-link__item
+									span.ref-link__term Всего кликов по вашей ссылке:
+									span.ref-link__description 15 кликов
+								li.ref-link__item
+									span.ref-link__term Обьем вашей структуры
+									span.ref-link__description 50 000$
+								li.ref-link__item
+									span.ref-link__term Подключенно партнеров
+									span.ref-link__description 15
+								li.ref-link__item
+									span.ref-link__term Получено $ от партнеров
+									span.ref-link__description 15 000$
+
+	section.history.ref-history
+		.history__inner.office-container
+			h2.history__title.title.office-title История вознагрождений реферальной структуры
+
+			.history__wrap
+				.history__content.table.history-table
+					.table__header.table-row.table-row--history.table-header.table-header--history
+						each item in table_header_history_ref
+							.table-header__item.table-header__item--history.table-row__item.table-row__item--history(class= item[1] class=(item[2]? item[2]: ''))= item[0]
+
+
+					while n < 6
+						- n++
+						.table-row.table-row--history
+							each elem,j in table_header_history_ref
+								if j === 0
+									.table-row__item.table-row__item--history(class= elem[1]) 1 уровень
+								if j === 1
+									.table-row__item.table-row__item--history(class= elem[1]) 112224
+								if j === 2
+									.table-row__item.table-row__item--history(class= elem[1]) 24.10.21
+								if j === 3
+									.table-row__item.table-row__item--history(class= elem[1]) 3%
+								if j === 4
+									.table-row__item.table-row__item--history(class= elem[1]) -
+								if j === 4
+									.table-row__item.table-row__item--history(class= elem[1]) 25,50$
+
+					- n = 0
+
+
+
+
+	section.modal.modal--registration#modal-registration
+		.modal__wrapper.container
+			.modal__header
+				a.modal__logo.logo(href="/index.html")
+					+img-retina(`logo`, `png`, `логотип`, `logo__img`, `145`, `46`)
+				h2.modal__title Реферальные программы
+				a.modal__link-close(href="#" rel="modal:close" aria-label="закрыть")
+
+			.modal__content
+				.modal__inner.tabs-block
+					.tabs-block__header.tabs-header
+						h3.tabs-header__title Обьем структуры
+						ul.tabs-header__list(data-tabs='true')
+							each item, i in tabs_item
+								li.tabs-header__item
+									if i === 0
+										a.tabs-header__link(href=`#tab-${i+1}` data-tabby-default)= item
+									else
+										a.tabs-header__link(href=`#tab-${i+1}`)= item
+					.tabs-block__content.table.level
+						.table__header.table-row.table-header
+							each item in table_header_modal
+								.table-header__item.table-row__item(class= item[1])= item[0]
+						each item, i in tabs_item
+							.level__content(id=`tab-${i+1}`)
+
+								while n  < 7
+									- n++
+									.table-row
+										each elem,j in table_header_modal
+											if j === 0
+												.table-row__item(class= elem[1])= `${n} уровень`
+											if j === 1
+												.table-row__item(class= elem[1]) 1%
+											if j === 2
+												.table-row__item(class= elem[1]) 0.5%
+												|
+								- n = 0

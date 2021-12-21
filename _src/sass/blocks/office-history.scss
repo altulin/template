@@ -1,0 +1,70 @@
+.history {
+  @include font("Gilroy");
+  margin-bottom: 80px;
+  margin-top: 80px;
+
+
+}
+
+.history-table {
+  @include mw($ph) {}
+}
+
+.table-row {
+
+  &--history {
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 21px;
+  }
+
+  &__item {
+
+    &--history {
+      width: 25%;
+    }
+
+    &--arr {
+      display: flex;
+      align-items: center;
+      cursor: pointer;
+      transition: opacity 0.6s;
+
+      @include hocus() {
+        opacity: 0.6;
+      }
+
+      &::after {
+        content: "";
+        display: block;
+        width: 5px;
+        height: 10px;
+        background-image: url("/img/svg/arr-history.svg");
+        margin-left: 10px;
+      }
+    }
+  }
+}
+
+.table-header {
+
+  &--history {
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 19px;
+    color: #7A838D;
+  }
+
+  &__item {
+    &--history {
+      font-size: 16px;
+      line-height: 19px;
+    }
+  }
+}
+
+.ref-history {
+  .table-row__item--history {
+    width: calc(100% / 6);
+  }
+}
