@@ -1,7 +1,9 @@
+import renderHover from "./hover";
+
 let resizeTimeout;
 
 const actualResizeHandler = () => {
-  //
+  renderHover();
 };
 
 const resizeThrottler = () => {

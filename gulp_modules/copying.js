@@ -5,7 +5,7 @@ const { src, dest } = pluginsObject.gulp;
 const {
   dist: {
     cssFile,
-    cssMinFile,
+    // cssMinFile,
     fontsFiles,
     jsFile,
     jsMinFile,
@@ -22,7 +22,7 @@ const getCopying = () => {
   return src(
     [
       cssFile,
-      cssMinFile, // стили мин если надо
+      // cssMinFile, // стили мин если надо
       fontsFiles,
       jsFile,
       jsMinFile, // скрипты мин если надо

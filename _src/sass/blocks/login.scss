@@ -19,12 +19,12 @@
 }
 
 .form-exit {
-  @include font("EuclidSquare");
+  // @include font("EuclidSquare");
   padding-top: 48px;
   padding-bottom: 48px;
   padding-left: 40px;
   padding-right: 40px;
-  background: #21212B;
+  background: #21212b;
   border-radius: 8px;
   display: flex;
   flex-direction: column;
@@ -76,7 +76,7 @@
   }
 
   &__box {
-    &+div {
+    & + div {
       margin-top: 16px;
     }
   }
@@ -101,12 +101,12 @@
     padding: 21px 16px;
     font-size: 14px;
     line-height: 18px;
-    color: #90969E;
+    color: #90969e;
 
     &::placeholder {
       font-size: 14px;
       line-height: 18px;
-      color: #90969E;
+      color: #90969e;
     }
   }
 
@@ -115,7 +115,7 @@
     line-height: 18px;
     margin-top: 24px;
     text-align: center;
-    color: #90969E;
+    color: #90969e;
   }
 
   &__btn {
@@ -125,7 +125,7 @@
     line-height: 18px;
     padding-top: 21px;
     padding-bottom: 21px;
-    background: linear-gradient(360deg, #FF6240 0%, #D50000 100%);
+    background: linear-gradient(360deg, #ff6240 0%, #d50000 100%);
     border-radius: 4px;
     margin-top: 32px;
     cursor: pointer;
@@ -141,7 +141,7 @@
     font-weight: 500;
     font-size: 14px;
     line-height: 18px;
-    color: #90969E;
+    color: #90969e;
     margin-top: 24px;
     transition: 0.3s;
 

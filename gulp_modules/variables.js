@@ -2,40 +2,58 @@ import pluginsObject from "./plugins.js";
 
 const projectName = `finance`; // название проекта
 const distFolder = `${projectName}_dist`; // Папка продакшн
-const distFolderZip = `${distFolder}.zip`;
+const distFolderZip = "*.zip";
 const srcFolder = `_src`; // Папка разработки
 
 const mode = pluginsObject.minimist(process.argv.slice(2))._[0];
-const assemblyWebpack = false; // webpack true or false
+const assemblyWebpack = true; // webpack true or false
 const assemblyBabel = false; // babel true or false
+
+const cssFileList = ["", "-doc"];
 
 const plugunsJsUsed = [
   `jquery_js`,
   // `videojs__js`,
-  `slick_js`,
+  // `slick_js`,
   // `locomotive_scroll`,
-  `ionRangesliderJs`,
-  `mmenu_js`,
-  `jquery_modal_js`,
-  `glightbox_js`,
+  // `ionRangesliderJs`,
+  // `mmenu_js`,
+  // `jquery_modal_js`,
+  // `glightbox_js`,
   // `inputmask_js`,
   // `swiper_js`,
   // `lazysizes_js`,
   `myJsLibs`,
   `myJsFile`,
 ];
+
 const plugunsCssUsed = [
-  `normalize_css`,
-  // `videojs__css`,
-  `slick_css`,
-  // `locomotive_scroll_css`,
-  "ionRangesliderCss",
-  `mmenu_css`,
-  `jquery_modal_css`,
-  `glightbox_css`,
-  // `swiper_css`,
-  `myCssLibs`,
-  `myCssFile`,
+  [
+    `normalize_css`,
+    // `videojs__css`,
+    // `slick_css`,
+    // `locomotive_scroll_css`,
+    // "ionRangesliderCss",
+    // `mmenu_css`,
+    // `jquery_modal_css`,
+    // `glightbox_css`,
+    // `swiper_css`,
+    `myCssLibs`,
+    `myCssFile`,
+  ],
+  [
+    // `normalize_css`,
+    // `videojs__css`,
+    // `slick_css`,
+    // `locomotive_scroll_css`,
+    // "ionRangesliderCss",
+    // `mmenu_css`,
+    // `jquery_modal_css`,
+    // `glightbox_css`,
+    // `swiper_css`,
+    // `myCssLibs`,
+    `myCssFileDoc`,
+  ],
 ];
 
 const plugunsJs = new Map([
@@ -88,6 +106,7 @@ const plugunsCss = new Map([
     `node_modules/responsive-tabs/css/responsive-tabs.css`,
   ],
   [`myCssFile`, `${srcFolder}/sass/style.scss`], // мой файл css
+  [`myCssFileDoc`, `${srcFolder}/sass/style-doc.scss`], // мой файл css
   [`myCssLibs`, `${srcFolder}/css/libs/**/*.css`], // мои библиотеки css
   [`swiper_css`, `node_modules/swiper/swiper-bundle.min.css`],
   [`videojs__css`, `node_modules/video.js/dist/video-js.min.css`],
@@ -103,7 +122,7 @@ const plugunsCss = new Map([
 
 const paths = {
   dist: {
-    cssFile: `${srcFolder}/css/style.css`,
+    cssFile: `${srcFolder}/css/*.css`,
     cssMinFile: `${srcFolder}/css/style.min.css`,
     fontsFiles: `${srcFolder}/fonts/*.{woff,woff2}`,
     fontsFolder: `${srcFolder}/fonts/`,
@@ -122,7 +141,7 @@ const paths = {
     jsFile: `script.js`,
     jsMinFile: `script.min.js`,
     jsFiles: `${srcFolder}/js/**/*.js`,
-    cssFile: `style.css`,
+    cssFile: `style`,
     cssMinFile: `style.min.css`,
     rasterImg: `${srcFolder}/_img/*.{png,jpg}`,
     vectorImg: `${srcFolder}/_img/svg/*.svg`,
@@ -155,4 +174,5 @@ export {
   plugunsCss,
   paths,
   assemblyBabel,
+  cssFileList,
 };

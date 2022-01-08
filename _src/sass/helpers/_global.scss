@@ -9,11 +9,10 @@
 html {
   box-sizing: border-box;
   font-size: 16px;
-
 }
 
 body {
-  @include font("Manrope");
+  // @include font("Manrope");
 
   display: flex;
   flex-direction: column;
@@ -100,42 +99,6 @@ button {
   }
 }
 
-.hover-opacity {
-  transition: 0.2s;
-
-  &:hover {
-    opacity: 0.5;
-  }
-}
-
-.tablet-visibility {
-  display: none;
-
-  @include mw($tb) {
-    display: block;
-  }
-}
-
-.tablet-hidden {
-  @include mw($tb) {
-    display: none;
-  }
-}
-
-.phone-visibility {
-  display: none;
-
-  @include mw($ph) {
-    display: block;
-  }
-}
-
-.phone-hidden {
-  @include mw($ph) {
-    display: none;
-  }
-}
-
-* {
-  // outline: 1px solid #ff6347;
-}
+// * {
+// outline: 1px solid #ff6347;
+// }

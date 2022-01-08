@@ -4,7 +4,7 @@ import makeImages from "./gulp_modules/images.js";
 import createSprite from "./gulp_modules/sprite.js";
 import getStyleFile from "./gulp_modules/styles.js";
 import { browserSync } from "./gulp_modules/browsersync.js";
-import { clean, cleanImg, cleanZip } from "./gulp_modules/clean.js";
+import cleanTools from "./gulp_modules/clean.js";
 import getScriptFile from "./gulp_modules/scripts.js";
 import createWebp from "./gulp_modules/images-webp.js";
 import getWatchers from "./gulp_modules/watch.js";
@@ -13,6 +13,7 @@ import getCopying from "./gulp_modules/copying.js";
 import creteArchive from "./gulp_modules/archiving.js";
 
 const { parallel, series } = pluginsObject.gulp;
+const { delDistFolder, cleanImg, cleanZip, cleanHtml, cleanCss } = cleanTools;
 
 const development = series(
   parallel(
@@ -28,7 +29,7 @@ const development = series(
 );
 
 const production = series(
-  parallel(clean, cleanImg, cleanZip),
+  parallel(delDistFolder, cleanImg, cleanZip, cleanHtml, cleanCss),
   parallel(
     makeImagesSvg,
     makeImages,
@@ -41,6 +42,6 @@ const production = series(
   series(getCopying, creteArchive)
 );
 
-const test = series(getStyleFile);
+const test = series(creteArchive);
 
 export { development, production, test };

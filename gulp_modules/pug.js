@@ -1,11 +1,12 @@
 import pluginsObject from "./plugins.js";
-import { paths } from "./variables.js";
+import { paths, mode } from "./variables.js";
 import { makePlumber } from "./util.js";
 
 const {
   pug,
   prettify,
   browsersync,
+  gulpif,
   gulp: { src, dest },
 } = pluginsObject;
 
@@ -20,7 +21,7 @@ const transformPug = () => {
     .pipe(pug({ pretty: true }))
     .pipe(prettify({ indent_char: "", indent_size: 2 }))
     .pipe(dest(srcFolder))
-    .pipe(browsersync.stream());
+    .pipe(gulpif(mode === `development`, browsersync.stream()));
 };
 
 export default transformPug;

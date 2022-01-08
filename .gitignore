@@ -13,6 +13,6 @@ node_modules/
 /*_dist/
 /build/
 npm-debug.*
-src/css/app.min.css
-src/css/*.map
+_src/css/*.map
+_src/*.html
 Thumbs.db

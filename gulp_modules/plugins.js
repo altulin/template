@@ -22,10 +22,10 @@ import webp from "gulp-webp";
 import pug from "gulp-pug";
 import prettify from "gulp-html-prettify";
 import babel from "gulp-babel";
-import sassGlob from "gulp-sass-glob";
 import plumber from "gulp-plumber";
 import notify from "gulp-notify";
 import zip from "gulp-zip";
+import stream from "merge-stream";
 
 const pluginsObject = {
   gulp,
@@ -52,10 +52,10 @@ const pluginsObject = {
   pug,
   prettify,
   babel,
-  sassGlob,
   plumber,
   notify,
   zip,
+  stream,
 };
 
 export default pluginsObject;
